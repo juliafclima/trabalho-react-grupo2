@@ -4,7 +4,7 @@ import AppRouter from "./routes";
 export default function App() {
   return    (
     <>
-    {/* tag 2.0.0 */}
+    {/* tag 2.1.0 */}
       <BrowserRouter>
         <AppRouter />
       </BrowserRouter>
