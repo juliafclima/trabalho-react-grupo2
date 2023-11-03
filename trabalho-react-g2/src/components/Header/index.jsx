@@ -16,7 +16,7 @@ export default function Header() {
                <div className="logo">Orkut</div>
                <div className="menu-toggle" onclick="toggleMenu()">☰</div>
                <ul className="menu">
-                  <li>{ImgInicio} Início</a></li>
+                  {/* </ul><li>{ImgInicio} Início</a></li> */}
                   <li><a href="#">Perfil</a></li>
                   <li><a href="#">Album</a></li>
                   <li><a href="#">Comunidades</a></li>
