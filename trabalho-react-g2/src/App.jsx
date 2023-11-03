@@ -6,6 +6,7 @@ export default function App() {
     <>
     {/* tag 1.0.0 */}
       <BrowserRouter>
+      
         <AppRouter />
       </BrowserRouter>
     </>
