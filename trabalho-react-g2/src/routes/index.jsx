@@ -16,7 +16,7 @@ export default function AppRouter() {
         < Route path="/depoimentos" element={< Depoimentos />} />
         < Route path="/comunidade" element={< Comunidade />} />
         < Route path="/album" element={< Album />} />
-        < Route path="/erro" element={< Erro />} />
+        < Route path="*" element={< Erro />} />
         < Route path="/login" element={< Login />} />
         < Route path="/cadastro" element={< Cadastro />} />
       </Routes>
