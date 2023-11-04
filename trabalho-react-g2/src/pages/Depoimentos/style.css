@@ -3,7 +3,7 @@ body {
 }
 
 .depoimentos {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
  
@@ -24,10 +24,10 @@ body {
     margin-right: 10px; /* Adicione margem para separar a imagem do texto */
   }
 
-  .car-pessoa{
-    width: 300px;
-    border: 1px solid red;
-    border-radius: 30px;
+  .coluna-preview{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    border: #ED2592;
   }
-
-  
