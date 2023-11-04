@@ -3,6 +3,7 @@ import "./style.css";
 import Capa from "../../assets/img/comunidade/carlucho.png";
 import Lupa from "../../assets/img/comunidade/lupa.jpg";
 import violao from "../../assets/img/comunidade/violao.jpg";
+import Header from '../../components/Header';
 
 export default function Comunidade() {
   return (
