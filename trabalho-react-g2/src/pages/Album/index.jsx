@@ -1,45 +1,76 @@
-import React from 'react';
-import './style.css';
-// import imgLizz from '../../assets/img/lizz.jpeg';
+// ImageCarousel.js
+import React, { useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Clock from './clock'; // Importe o componente Clock
 
-export default function Album() {
-  //const url = 'https://loremflickr.com/200/201';
-  const fotos = [
-    'imgLizz',
-    'imgLizz',
-    'imgLizz',
-    // Adicione mais fotos conforme necessário
-  ];
+export default function ImageCarousel() {
+  const [images, setImages] = useState([]);
+  const [fileInputKey, setFileInputKey] = useState(Date.now());
+  const [likes, setLikes] = useState(new Array(images.length).fill(0));
 
-  let fotoAtual = 1;
+  const handleImageUpload = (e) => {
+    const newImages = [...images];
 
-  function mudarFoto(n) {
-    mostraFotos(fotoAtual += n);
-  }
-
-  function mostraFotos(n) {
-    let i;
-    const fotos = document.getElementsByClassName("foto");
-    if (n > fotos.length) { fotoAtual = 1; }
-    if (n < 1) { fotoAtual = fotos.length; }
-    for (i = 0; i < fotos.length; i++) {
-      fotos[i].style.display = "none";
+    for (let i = 0; i < e.target.files.length; i++) {
+      const file = e.target.files[i];
+      const imageUrl = URL.createObjectURL(file);
+      newImages.push(imageUrl);
     }
-    fotos[fotoAtual - 1].style.display = "block";
-  }
+
+    setImages(newImages);
+    setFileInputKey(Date.now());
+    setLikes(new Array(newImages.length).fill(0));
+  };
+
+  const handleLikeClick = (index) => {
+    const updatedLikes = [...likes];
+    updatedLikes[index] += 1;
+    setLikes(updatedLikes);
+  };
 
   return (
-    <>
-      <Header />
-      <div className="album">
-        <p>qlqr coisa</p>
-        <div className="w3-content w3-display-container">
-          {fotos.map((foto, index) => (
-            <div key={index} className="foto" style={{ backgroundImage: `url(${foto})` }}></div>
+    <div>
+      <Clock /> {/* Adicione o componente Clock aqui */}
+      <h2>Álbum de Imagens</h2>
+
+      <input
+        type="file"
+        accept="image/*"
+        multiple
+        key={fileInputKey}
+        onChange={handleImageUpload}
+      />
+
+      {images.length > 0 && (
+        <Carousel
+          showThumbs={false}
+          infiniteLoop={true}
+          useKeyboardArrows={true}
+          emulateTouch={true}
+          showStatus={false}
+          showIndicators={true}
+          centerMode={true}
+          centerSlidePercentage={60}
+          dynamicHeight={true}
+          width="80%"
+          stopOnHover={true}
+        >
+          {images.map((image, index) => (
+            <div key={index}>
+              <img
+                src={image}
+                alt={`Imagem ${index}`}
+                className="carousel-image"
+              />
+              <button className="like-button" onClick={() => handleLikeClick(index)}>
+                Like
+              </button>
+              <p>Likes: {likes[index]}</p>
+            </div>
           ))}
-          <button className="w3-button w3-black w3-display-left" onClick={() => mudarFoto(-1)}>&#10094;</button>
-          <button className="w3-button w3-black w3-display-right" onClick={() => mudarFoto(1)}>&#10095;</button>
-        </div>
-      </div></>
+        </Carousel>
+      )}
+    </div>
   );
 }
