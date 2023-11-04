@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css'; // Importe o arquivo de estilo CSS
+import { Link } from 'react-router-dom';
 
 const Header = () => {
    const [menuVisible, setMenuVisible] = useState(false);
@@ -14,11 +15,10 @@ const Header = () => {
             <div className="container">
                <div className="nav-logo">REKUT</div>
                <div className={`nav-links ${menuVisible ? 'active' : ''}`}>
-                  <a href="#">Início</a>
-                  <a href="#">Perfil</a>
-                  <a href="#">Album</a>
-                  <a href="#">Comunidades</a>
-                  <a href="#">Depoimentos</a>
+                  <Link to='/'>Início</Link>
+                  <Link to='/depoimentos'>Depoimentos</Link>
+                  <Link to='/comunidade'>Comunidades</Link>
+                  <Link to='/album'>Album</Link> 
                </div>
                <div className="menu-icon" onClick={handleMenuClick}>
                   ☰
@@ -26,7 +26,6 @@ const Header = () => {
             </div>
          </nav>
       </header>
-
    );
-};
+}
 export default Header;
