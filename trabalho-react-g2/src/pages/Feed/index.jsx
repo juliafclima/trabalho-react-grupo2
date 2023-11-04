@@ -1,18 +1,14 @@
-import React from "react";
+/* import React from "react";
 import './style.css';
 import Header from "../../components/Header";
 
 export default function Feed() {
     return (
         <>
-            <Header />
-            <div className="feed-container">
+            <Header /> */
+{/* <div className="feed-container">
                 <div className="fundo-azul">
-
-                    {/* LOGO */}
                     <div className="title">REKUT</div>
-
-                    {/* BIO */}
                     <div className="retangulo-bio">
                         <div className="nome-bio" style={{ left: 88, top: 456 }}>Lucas José Gonçalves</div>
                         <div className="link-style" style={{ left: 108, top: 642 }}><a href="https://www.google.com">Editar Perfil</a></div>
@@ -30,7 +26,6 @@ export default function Feed() {
                         <div className="info-perfil" style={{ left: 131, top: 518 }}>Masculino Casado<br />Brasil</div>
                     </div>
 
-                    {/* AMIGOS */}
                     <div className="amigos-container">
                         <div className="retangulo-amigos"></div>
                         <div className="text-style" style={{ left: 30, top: 19 }}>Amigos</div>
@@ -43,7 +38,6 @@ export default function Feed() {
                         <img className="img-amigos" style={{ left: 78, top: 65 }} src="src\assets\amigo2.jpeg" alt="Amigo 6" />
                     </div>
 
-                    {/* COMUNIDADES */}
                     <div className="communidades-container">
                         <div className="retangulo-comunidades"></div>
                         <div className="text-style" style={{ left: 30, top: 38, width: 208, height: 55 }}>Comunidades</div>
@@ -66,7 +60,6 @@ export default function Feed() {
                         <img className="rounded-image" style={{ left: 314, top: 1084 }} src="src\assets\comun8.png" alt="Comunidade 8" />
                     </div>
 
-                    {/* PERFIL */}
                     <div className="perfil-container">
                         <div className="retangulo-perfil"></div>
                         <div className="nome-principal">Lucas José Gonçalves</div>
@@ -97,7 +90,6 @@ export default function Feed() {
                         <div className="text-style" style={{ left: 575, top: 913 }}>Harry Potter e a Ordem da Fênix</div>
                         <div className="pink-border-long" style={{ left: 550, top: 909 }}></div>
 
-                        {/* ---------------------------------------------------------------------------------------------------------------------------------- */}
                         <div className="text-style fonte-cinza" style={{ left: 72, top: 779, width: 227 }}>musicas</div>
                         <div className="text-style" style={{ left: 585, top: 792 }}>Linkin Park</div>
                         <div className="pink-border" style={{ left: 554, top: 788 }}></div>
@@ -108,13 +100,11 @@ export default function Feed() {
                         <div className="text-style" style={{ left: 815, top: 792 }}>Blink-182</div>
                         <div className="pink-border" style={{ left: 780, top: 788 }}></div>
 
-                        {/* ---------------------------------------------------------------------------------------------------------------------------------- */}
                         <div className="text-style fonte-cinza" style={{ left: 72, top: 1022, width: 227 }}>livros</div>
                         <div className="text-style" style={{ left: 325, top: 1015 }}>Diário de um Banana</div>
                         <div className="pink-border-medium-long" style={{ left: 304, top: 1010 }}></div>
                     </div>
 
-                    {/* PERFIL */}
                     <div className="depoimentos-container">
                         <div className="retangulo-depoimentos" />
                         <div className="titulo">Depoimentos</div>
@@ -124,7 +114,65 @@ export default function Feed() {
                         <div className="horario">03/11/2008 - 18:13</div>
                     </div>
                 </div>
+            </div> */}
+
+/* 
+        </>
+    );
+} */
+import React from 'react';
+import './style.css'; // Importe o arquivo de estilos CSS
+import imgPerfil from '../../assets/image.png'; // Importe a imagem do perfil
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+const Perfil = () => {
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get("https://6542dfe001b5e279de1fabce.mockapi.io/posts")
+            .then((response) => {
+                setPosts(response.data);
+                console.log(response.data);
+            })
+            .catch(() => {
+                console.log("Deu errado !");
+            });
+    }, []);
+
+    function deletePost(id) {
+        axios.delete(`https://6542dfe001b5e279de1fabce.mockapi.io/posts/${id}`);
+        setPosts(posts.filter(post => post.id !== id));
+    }
+
+    return (
+        <>
+            <div className="perfil-container">
+                <div className="perfil-info">
+                    <div className="perfil-left">
+                        <img className="perfil-foto" src={imgPerfil} alt="Foto do Usuário" />
+                        <h2>Nome do Usuário</h2>
+                        <nav className="perfil-links">
+                            <a href="/recados">Recados</a>
+                            <a href="/galeria">Galeria</a>
+                            <a href="/depoimentos">Depoimentos</a>
+                        </nav>
+                    </div>
+                    <div className="perfil-right">
+                        <h3>Relacionamento: Solteiro(a)</h3>
+                        <p><strong>Quem sou eu:</strong> Descrição sobre o usuário.</p>
+                        <p><strong>País:</strong> Brasil</p>
+                        <p><strong>Músicas Favoritas:</strong> Lista de músicas favoritas</p>
+                        <p><strong>Filmes:</strong> Lista de filmes favoritos</p>
+                        <p><strong>Livros:</strong> Lista de livros favoritos</p>
+                    </div>
+                </div>
             </div>
         </>
     );
-}
+};
+
+export default Perfil;
+

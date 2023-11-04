@@ -1,5 +1,4 @@
-/* GLOBAL */
-
+/* 
 .fundo-azul {
     width: 3100px;
     height: 1950px;
@@ -27,9 +26,6 @@
     word-wrap: break-word;
 }
 
-/* ######################################################################### */
-
-/* LOGO */
 .title {
     left: 52px;
     top: 22px;
@@ -40,10 +36,6 @@
     font-weight: 400;
     word-wrap: break-word;
 }
-
-/* ######################################################################### */
-
-/* BIO */
 
 .feed-container {
     margin-left: 350px;
@@ -126,9 +118,6 @@
     word-wrap: break-word;
 }
 
-/* ######################################################################### */
-
-/* AMIGOS */
 
 .amigos-container {
     width: 534px;
@@ -156,10 +145,6 @@
     border-radius: 100px;
 }
 
-/* ######################################################################### */
-
-/* COMUNIDADES */
-
 .communidades-container {
     width: 534px;
     height: 1297px;
@@ -185,8 +170,6 @@
     border-radius: 10px;
 }
 
-
-/* PRECISO MEXER NESSE CSS.. TA FEIO */
 .letrinhas {
     text-align: center;
     font-size: 19px;
@@ -196,11 +179,6 @@
     font-weight: 400;
     word-wrap: break-word;
 }
-
-
-/* ######################################################################### */
-
-/* PERFIL */
 
 .perfil-container {
     width: 1228px;
@@ -349,10 +327,6 @@
     top: 600px;
 }
 
-/* ######################################################################### */
-
-/* DEPOIMENTOS */
-
 .depoimentos-container {
     width: 1228px;
     height: 475px;
@@ -428,4 +402,53 @@
     font-family: Arial;
     font-weight: 400;
     word-wrap: break-word;
+} */
+
+
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.perfil-info {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+}
+
+.perfil-left {
+    margin-right: 20px;
+}
+
+.perfil-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.perfil-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.perfil-right {
+    max-width: 400px;
+}
+
+/* Adicione regras de estilo para tornar o site responsivo conforme necessário */
+@media (max-width: 768px) {
+    .perfil-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .perfil-left {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
