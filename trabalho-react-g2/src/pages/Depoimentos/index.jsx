@@ -64,33 +64,32 @@ export default function Depoimentos() {
   ];
 
   return (
-    <div className="perfil">
-      <div className="car-pessoa">
-        <div className="car-imagem">
-        
-
-        </div>
-        <div className="botoes">
-          <button>Perfil</button>
-          <button>Album</button>
-          <button>Comunidade</button>
-        </div>
-
-        <div className="descricao">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in perspiciatis aliquam suscipit aspernatur excepturi, illo dolor rem culpa, veritatis exercitationem porro odio dolorum at est sed voluptatem maxime. Sequi!</p>
-        </div>
-        
-      </div>
-      <div className="depoimentos">
-        <h2>Depoimentos de Amigos</h2>
-        {depoimentos.map((depoimento, index) => (
-          <div key={index} className="depoimento">
-            <img src={depoimento.imagem} alt={depoimento.nome} />
-            <p>Nome: {depoimento.nome}</p>
-            <p>Mensagem: {depoimento.mensagem}</p>
+    <>
+      <Header />
+      <div className="perfil">
+        <div className="car-pessoa">
+          <div className="car-imagem">
           </div>
-        ))}
+          <div className="botoes">
+            <button>Perfil</button>
+            <button>Album</button>
+            <button>Comunidade</button>
+          </div>
+          <div className="descricao">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in perspiciatis aliquam suscipit aspernatur excepturi, illo dolor rem culpa, veritatis exercitationem porro odio dolorum at est sed voluptatem maxime. Sequi!</p>
+          </div>
+        </div>
+        <div className="depoimentos">
+          <h2>Depoimentos de Amigos</h2>
+          {depoimentos.map((depoimento, index) => (
+            <div key={index} className="depoimento">
+              <img src={depoimento.imagem} alt={depoimento.nome} />
+              <p>Nome: {depoimento.nome}</p>
+              <p>Mensagem: {depoimento.mensagem}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
