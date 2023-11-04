@@ -2,6 +2,18 @@ import React from 'react';
 import './style.css';
 
 export default function Depoimentos() {
+    
+  function DepoimentoPreview({ nome, mensagem }) {
+    const previewLength = 100;
+    const mensagemPreview = mensagem.props.children[0].substring(0, previewLength) + '...';
+  
+    return (
+      <div className="depoimento-preview">
+        <p>Nome: {nome}</p>
+        <p>Mensagem: {mensagemPreview}</p>
+      </div>
+    );
+  }
   const depoimentos = [
     {
       nome: 'João',
@@ -14,10 +26,10 @@ export default function Depoimentos() {
           <br />
           Te amo muito ❤️
           <br />
-          by: Ayla
+          by: João
         </div>
       ),
-      imagem: 'src/assets/img/joao.jpg',
+      imagem: 'src/assets/img//perfil/joao.jpg',
     },
     {
       nome: 'Maria',
@@ -37,7 +49,7 @@ export default function Depoimentos() {
           Obrigado por tudo!
         </div>
       ),
-      imagem: 'src/assets/img/maria.jpg',
+      imagem: 'src/assets/img/perfil/maria.jpg',
     },
     {
       nome: 'Luiza',
@@ -59,38 +71,31 @@ export default function Depoimentos() {
           ~❤️~
         </div>
       ),
-      imagem: 'src/assets/img/luiza.jpeg',
+      imagem: 'src/assets/img/perfil/luiza.jpeg',
     },
   ];
 
+
+
   return (
-    <div className="perfil">
-      <div className="car-pessoa">
-        <div className="car-imagem">
-        
-
-        </div>
-        <div className="botoes">
-          <button>Perfil</button>
-          <button>Album</button>
-          <button>Comunidade</button>
-        </div>
-
-        <div className="descricao">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in perspiciatis aliquam suscipit aspernatur excepturi, illo dolor rem culpa, veritatis exercitationem porro odio dolorum at est sed voluptatem maxime. Sequi!</p>
-        </div>
-        
-      </div>
-      <div className="depoimentos">
-        <h2>Depoimentos de Amigos</h2>
-        {depoimentos.map((depoimento, index) => (
-          <div key={index} className="depoimento">
-            <img src={depoimento.imagem} alt={depoimento.nome} />
-            <p>Nome: {depoimento.nome}</p>
-            <p>Mensagem: {depoimento.mensagem}</p>
-          </div>
-        ))}
-      </div>
+  
+    <div className="depoimentos">
+    <div className="coluna-preview">
+      <h2>Previews de Depoimentos</h2>
+      {depoimentos.map((depoimento, index) => (
+        <DepoimentoPreview key={index} nome={depoimento.nome} mensagem={depoimento.mensagem} />
+      ))}
     </div>
-  );
+    <div className="coluna-depoimentos">
+      <h2>Depoimentos de Amigos</h2>
+      {depoimentos.map((depoimento, index) => (
+        <div key={index} className="depoimento">
+          <img src={depoimento.imagem} alt={depoimento.nome} />
+          <p>Nome: {depoimento.nome}</p>
+          <p>Mensagem: {depoimento.mensagem}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+);
 }
