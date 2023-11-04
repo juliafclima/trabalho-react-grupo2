@@ -1,16 +1,18 @@
 import React from "react";
 import "./style.css";
 import Capa from "../../assets/img/comunidade/carlucho.png";
-import Lupa from "../../assets/img/comunidade/lupa.jpg"
-import violao from "../../assets/img/comunidade/violao.jpg"
+import Lupa from "../../assets/img/comunidade/lupa.jpg";
+import violao from "../../assets/img/comunidade/violao.jpg";
+import Header from '../../components/Header';
 
 export default function Comunidade() {
   return (
-    <div className="comunidade">
-   
+    <>
+      <Header />
+      <div className="comunidade">
         <div className="card">
           <div className="cardimg">
-            <img className= "morangola" src={Capa} alt="" />
+            <img className="morangola" src={Capa} alt="" />
           </div>
           <div className="texto">
             <h1>Eu amo morango! </h1>
@@ -19,8 +21,6 @@ export default function Comunidade() {
             </p>
           </div>
         </div>
-
-
         <div className="card">
           <div className="cardimg">
             <img src={violao} alt="" />
@@ -32,8 +32,6 @@ export default function Comunidade() {
             </p>
           </div>
         </div>
-
-
         <div className="card">
           <div className="cardimg">
             <img src={Lupa} alt="" />
@@ -45,16 +43,7 @@ export default function Comunidade() {
             </p>
           </div>
         </div>
-
-
-
-
-
-
-      </div>
-
-
-
-   
+      </div >
+    </>
   );
 }
