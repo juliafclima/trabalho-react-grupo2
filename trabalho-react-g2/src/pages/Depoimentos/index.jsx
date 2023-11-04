@@ -77,7 +77,7 @@ export default function Depoimentos() {
             <button>Comunidade</button>
           </div>
           <div className="descricao">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in perspiciatis aliquam suscipit aspernatur excepturi, illo dolor rem culpa, veritatis exercitationem porro odio dolorum at est sed voluptatem maxime. Sequi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in perspiciatis aliquam suscipit aspernatur excepturi, illo dolor rem culpa, veritatis exercitationem porro odio dolorum at est sed voluptatem maxime. Sequi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos aperiam blanditiis eveniet sapiente quia, quo temporibus laborum quisquam dicta dolorum esse repellat assumenda iste, itaque explicabo eius? Dolor, perferendis consequatur?</p>
           </div>
         </div>
         <div className="depoimentos">
