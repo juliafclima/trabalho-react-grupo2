@@ -81,30 +81,7 @@ export default function Depoimentos() {
   return (
     <>
       <Header />
-      <div className="perfil">
-        <div className="car-pessoa">
-          <div className="car-imagem">
-          </div>
-          <div className="botoes">
-            <button>Perfil</button>
-            <button>Album</button>
-            <button>Comunidade</button>
-          </div>
-          <div className="descricao">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in perspiciatis aliquam suscipit aspernatur excepturi, illo dolor rem culpa, veritatis exercitationem porro odio dolorum at est sed voluptatem maxime. Sequi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos aperiam blanditiis eveniet sapiente quia, quo temporibus laborum quisquam dicta dolorum esse repellat assumenda iste, itaque explicabo eius? Dolor, perferendis consequatur?</p>
-          </div>
-        </div>
-        <div className="botoes">
-          <button>Perfil</button>
-          <button>Album</button>
-          <button>Comunidade</button>
-        </div>
 
-        <div className="descricao">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in perspiciatis aliquam suscipit aspernatur excepturi, illo dolor rem culpa, veritatis exercitationem porro odio dolorum at est sed voluptatem maxime. Sequi!</p>
-        </div>
-        
-      </div>
       <div className="depoimentos">
         <h2>Depoimentos de Amigos</h2>
         {depoimentos.map((depoimento, index) => (
@@ -115,6 +92,6 @@ export default function Depoimentos() {
           </div>
         ))}
       </div>
-    </div>
+  </>
   );
 }
