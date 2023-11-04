@@ -8,18 +8,6 @@ main header {
    max-width: 500px;
 }
 
-img {
-   width: 20px;
-   margin-left: 40px;
-   cursor: pointer;
-}
-
-.modal {
-   width: 80px;
-   height: 100px;
-   background-color: white;
-}
-
 main .cards {
    display: flex;
    justify-content: center;
@@ -63,40 +51,6 @@ p {
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 500;
    color: #B3BACF;
-}
-
-.btns {
-   display: flex;
-   justify-content: space-between;
-   margin-top: 30px;
-}
-
-.btns button {
-   color: rgba(255, 255, 255, 0.938);
-   font-size: 1.3rem;
-   border: 0;
-   border-radius: 10px;
-   font-family: Arial, Helvetica, sans-serif;
-   font-weight: 700;
-   cursor: pointer;
-   padding: 5px 40px;
-}
-
-.btn-edit button {
-   background-color: #80D8FF;
-}
-
-.btn-readmore button {
-   background-color: #3DECB1;
-}
-
-.btn-delete button {
-   background-color: rgb(241, 45, 45);
-}
-
-.loading {
-   height: 100vh;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   text-align: center !important;
+   overflow-wrap: break-word;
 }

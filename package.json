@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
     "axios": "^1.6.0",
     "react-hook-form": "^7.47.0",
     "react-hooks-yup-form": "^0.1.5",

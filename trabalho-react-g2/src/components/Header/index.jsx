@@ -16,6 +16,7 @@ const Header = () => {
                <div className="nav-logo">REKUT</div>
                <div className={`nav-links ${menuVisible ? 'active' : ''}`}>
                   <Link to='/'>Início</Link>
+                  <Link to='/perfil'>Perfil</Link>
                   <Link to='/depoimentos'>Depoimentos</Link>
                   <Link to='/comunidade'>Comunidades</Link>
                   <Link to='/album'>Album</Link> 
