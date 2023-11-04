@@ -1,42 +1,112 @@
-.album {
-    text-align: center;
-  }
-  
-  .foto {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    background-size: cover;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    display: none;
-  }
-  
-  .w3-content {
-    position: relative;
-  }
-  
-  .w3-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2em;
-    padding: 8px 16px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .w3-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .w3-display-left {
-    left: 0;
-  }
-  
-  .w3-display-right {
-    right: 0;
-  }
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Botões */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Formulários */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Imagens */
+.img-container {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Cores Personalizadas */
+.primary-color {
+  color: #ed2592;
+}
+
+.secondary-color {
+  color: #759ccf;
+}
+
+.tertiary-color {
+  color: #a7c1e3;
+}
+
+.black-color {
+  color: #000000;
+}
+
+.white-color {
+  color: #ffffff;
+}
+
+.carousel-image {
+  border: 30px solid #791010; /* Adicione a borda com a cor e largura desejadas */
+  border-radius: 300px; /* Adicione bordas arredondadas, se preferir */
+  max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+}
+.carousel {
+  overflow: hidden;
+}
+
+.carousel .slide img {
+  max-width: 100%;
+  height: auto;
+}
+.like-button {
+  background-color: #28a745; /* Cor verde para o botão "Like" */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 10px; /* Adicionando algum espaço entre o botão e a imagem */
+}
+
+.like-button:hover {
+  background-color: #218838; /* Cor verde escura ao passar o mouse sobre o botão */
+}
