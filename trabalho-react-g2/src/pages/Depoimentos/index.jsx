@@ -25,18 +25,6 @@ export default function Depoimentos() {
     setPosts(posts.filter(post => post.id !== id));
   }
 
-  function DepoimentoPreview({ nome, mensagem }) {
-    const previewLength = 100;
-    const mensagemPreview = mensagem.props.children[0].substring(0, previewLength) + '...';
-
-    return (
-      <div className="depoimento-preview">
-        <p>Nome: {nome}</p>
-        <p>Mensagem: {mensagemPreview}</p>
-      </div>
-    );
-  }
-
   return (
     <>
       <Header />
@@ -53,20 +41,18 @@ export default function Depoimentos() {
                 <header>
                   <GeradorAleatorio />
                   <h2>{post.titulo}</h2>
-                </header>
-                <div className="line"></div>
-                <p>{post.conteudo}</p>
-                <div className="btns">
+                  <p>{post.conteudo}</p>
+                  <div className="btns">
                   <div className="btn-edit">
                     <Link to={`/update/${post.id}`}>
                       <button>Editar</button>
                     </Link>
                   </div>
-
                   <div className="btn-delete">
                     <button onClick={() => deletePost(post.id)}>Apagar</button>
                   </div>
                 </div>
+                </header>
               </div>
             );
           })}

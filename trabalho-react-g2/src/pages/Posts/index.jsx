@@ -22,6 +22,7 @@ export default function Posts() {
   const {
     register,
     handleSubmit,
+    reset, 
     formState: { errors } } = useForm({ resolver: yupResolver(validationPost) });
 
   const addPost = (data) => {
@@ -29,6 +30,7 @@ export default function Posts() {
       .post("https://6542dfe001b5e279de1fabce.mockapi.io/posts", data)
       .then(() => {
         console.log('Deu certo!');
+        reset();
         navigate('/depoimentos');
       })
       .catch(() => {
