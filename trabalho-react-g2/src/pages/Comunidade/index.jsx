@@ -18,108 +18,146 @@ const comunidades = [
   {
     imgSrc: borracha,
     titulo: "Eu nunca terminei uma borracha.",
+
     descricao: "Borrachas não merecem acabar!",
     idioma: "Português",
-  categoria: "Borrachas",
-  tipo: "Pública",
+    categoria: "Borrachas",
+    tipo: "Pública",
 
     membro: 10852,
     dono: "Carlucho",
-    data: "05/11/2011"
+    data: "05/11/2011",
   },
 
   {
     imgSrc: garfield,
     titulo: "Eu odeio acordar cedo.",
     descricao: "Comunidade auto explicativa.",
+    idioma: "Português",
+    categoria: "Sono",
+    tipo: "Pública",
+
     membro: 8653,
     dono: "Seljan",
-    data: "07/06/2013"
+    data: "07/06/2013",
   },
 
   {
     imgSrc: thony,
     titulo: "Eu colho flores e THONY RAMOS.",
     descricao: "E carlucho rega flores.",
+    idioma: "Português",
+    categoria: "Pêlos",
+    tipo: "Pública",
+
     membro: 9784,
     dono: "Lucas José",
-    data: "22/06/2016"
+    data: "22/06/2016",
   },
 
   {
     imgSrc: sorvete,
     titulo: "Queria sorvete mas era feijão.",
     descricao: "Quem nunca sofreu essa decepção na vida!?",
+    idioma: "Português",
+    categoria: "Ilusão",
+    tipo: "Pública",
+
     membro: 11256,
     dono: "Roger",
-    data: "06/05/2009"
+    data: "06/05/2009",
   },
 
   {
     imgSrc: xororo,
     titulo: "Não sei individualizar duplas.",
     descricao: "Pra mim eles são uma pessoa só e ponto.",
-    membro:4125 ,
+    idioma: "Português",
+    categoria: "Falta de personalidade",
+    tipo: "Pública",
+
+    membro: 4125,
     dono: "Juju",
-    data: "17/06/2013"
+    data: "17/06/2013",
   },
 
   {
-    imgSrc:shampoo ,
+    imgSrc: shampoo,
     titulo: "Eu leio o shampoo no banho.",
     descricao: "É mentira pois eu não enxergo.",
-    membro:3987 ,
+    idioma: "Português",
+    categoria: "Banho",
+    tipo: "Pública",
+
+    membro: 3987,
     dono: "Carlinhos",
-    data: "04/09/2011"
+    data: "04/09/2011",
   },
 
   {
-    imgSrc:comun7 ,
+    imgSrc: comun7,
     titulo: "Antes uma pedra no caminho...",
     descricao: "Do que duas nos rins!",
-    membro:10365 ,
+    idioma: "Português",
+    categoria: "Dor",
+    tipo: "Pública",
+
+    membro: 10365,
     dono: "Seljan",
-    data: "15/07/2013"
+    data: "15/07/2013",
   },
 
   {
     imgSrc: comun8,
     titulo: "Eu nunca morri na minha vida.",
     descricao: "E que continue assim...",
+    idioma: "Português",
+    categoria: "Sorte",
+    tipo: "Pública",
+
     membro: 11452,
     dono: "Lucas",
-    data: "12/05/2008"
+    data: "12/05/2008",
   },
 
   {
     imgSrc: carlucho,
     titulo: "Eu amo morangos!",
     descricao: "Quem discordar está errado.",
+    idioma: "Português",
+    categoria: "Fruta",
+    tipo: "Pública",
+
     membro: 6987,
     dono: "Carlota",
-    data: "04/07/2014"
+    data: "04/07/2014",
   },
 
   {
     imgSrc: lupa,
     titulo: "Professor, aumenta a letra!?",
     descricao: "E nem é meme.",
-    membro:17854 ,
+    idioma: "Português",
+    categoria: "Dificuldades",
+    tipo: "Pública",
+
+    membro: 17854,
     dono: "Liliquinha",
-    data: "01/09/2014"
+    data: "01/09/2014",
   },
 
   {
     imgSrc: violao,
     titulo: "Eu toco mesmo, e daí!?",
     descricao: "Violões, tô dentro.",
-    membro: 45698 ,
+    idioma: "Português",
+    categoria: "Musissistas",
+    tipo: "Pública",
+
+    membro: 45698,
     dono: "Julinhazinhainha",
-    data: "08/07/2010"
+    data: "08/07/2010",
   },
-
-
-
 ];
 
 const Comunidade = () => {
