@@ -33,10 +33,10 @@ export default function Login() {
                     const user = userData[0];
                     if (user.senha === senha) { // Compara a senha fornecida com a senha do usuário retornado
                         setToken(user.id); // Salva o ID do usuário no estado
-                        alert('Login bem-sucedido!');
+                        
                         navigateTo('/');
                     } else {
-                        alert('Senha incorreta. Tente novamente.');
+                        alert('Nome de Usuário ou Senha incorreta. Tente novamente.');
                     }
                 } else {
                     alert('Nome de usuário não encontrado. Verifique as credenciais.');

@@ -1,7 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
+import Header from '../../components/Header';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
 
 export default function Depoimentos() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://6542dfe001b5e279de1fabce.mockapi.io/posts")
+      .then((response) => {
+        setPosts(response.data);
+        console.log(response.data);
+      })
+      .catch(() => {
+        console.log("Deu errado !");
+      });
+  }, []);
+
+  function deletePost(id) {
+    axios.delete(`https://6542dfe001b5e279de1fabce.mockapi.io/posts/${id}`);
+    setPosts(posts.filter(post => post.id !== id));
+  }
+
+  function DepoimentoPreview({ nome, mensagem }) {
+    const previewLength = 100;
+    const mensagemPreview = mensagem.props.children[0].substring(0, previewLength) + '...';
+
+    return (
+      <div className="depoimento-preview">
+        <p>Nome: {nome}</p>
+        <p>Mensagem: {mensagemPreview}</p>
+      </div>
+    );
+  }
+
   const depoimentos = [
     {
       nome: 'João',
@@ -14,10 +49,10 @@ export default function Depoimentos() {
           <br />
           Te amo muito ❤️
           <br />
-          by: Ayla
+          by: João
         </div>
       ),
-      imagem: 'src/assets/img/joao.jpg',
+      imagem: 'src/assets/img//perfil/joao.jpg',
     },
     {
       nome: 'Maria',
@@ -37,7 +72,7 @@ export default function Depoimentos() {
           Obrigado por tudo!
         </div>
       ),
-      imagem: 'src/assets/img/maria.jpg',
+      imagem: 'src/assets/img/perfil/maria.jpg',
     },
     {
       nome: 'Luiza',
@@ -59,37 +94,60 @@ export default function Depoimentos() {
           ~❤️~
         </div>
       ),
-      imagem: 'src/assets/img/luiza.jpeg',
+      imagem: 'src/assets/img/perfil/luiza.jpeg',
     },
   ];
 
   return (
     <>
       <Header />
-      <div className="perfil">
-        <div className="car-pessoa">
-          <div className="car-imagem">
-          </div>
-          <div className="botoes">
-            <button>Perfil</button>
-            <button>Album</button>
-            <button>Comunidade</button>
-          </div>
-          <div className="descricao">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus in perspiciatis aliquam suscipit aspernatur excepturi, illo dolor rem culpa, veritatis exercitationem porro odio dolorum at est sed voluptatem maxime. Sequi!</p>
-          </div>
+
+      <Link to='/posts'>
+        <button style={{ marginRight: '20px' }}>Adicionar novo Post</button>
+      </Link>
+      <div className="depoimentos">
+         <h2>Depoimentos de Amigos</h2>
+      <main>
+        <div className="cards">
+          {posts.map((post, key) => {
+            return (
+              <div className="card" key={key}>
+                <header>
+                  <h2>{post.titulo}</h2>
+                </header>
+                <div className="line"></div>
+
+                <p>{post.descricao}</p>
+
+                <div className="btns">
+                  <div className="btn-edit">
+                    <Link to={`/update/${post.id}`}>
+                      <button>Editar</button>
+                    </Link>
+                  </div>
+
+                  <div className="btn-delete">
+                    <button onClick={() => deletePost(post.id)}>Apagar</button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <div className="depoimentos">
-          <h2>Depoimentos de Amigos</h2>
-          {depoimentos.map((depoimento, index) => (
-            <div key={index} className="depoimento">
-              <img src={depoimento.imagem} alt={depoimento.nome} />
-              <p>Nome: {depoimento.nome}</p>
-              <p>Mensagem: {depoimento.mensagem}</p>
-            </div>
-          ))}
-        </div>
+      </main>
       </div>
+     
+
+      {/* <div className="depoimentos">
+        
+        {depoimentos.map((depoimento, index) => (
+          <div key={index} className="depoimento">
+            <img src={depoimento.imagem} alt={depoimento.nome} />
+            <p>Nome: {depoimento.nome}</p>
+            <p>Mensagem: {depoimento.mensagem}</p>
+          </div>
+        ))}
+      </div> */}
     </>
   );
 }
