@@ -9,11 +9,11 @@ import Header from "../../components/Header";
 
 
 const validationPost = yup.object().shape({
-  titulo: yup.string().required("Preencha o título").max(40, "Até 40 caract."),
+  titulo: yup.string().required("Preencha o título").max(60, "Até 60 caract."),
   conteudo: yup
     .string()
     .required("Preencha o conteúdo")
-    .max(300, "Até 300 caract."),
+    .max(500, "Até 500 caract."),
 });
 
 export default function Posts() {
