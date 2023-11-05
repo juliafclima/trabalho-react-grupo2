@@ -5,14 +5,17 @@ const Card = ({ imgSrc, titulo, descricao, idioma, categoria, tipo, membro, dono
    return (
       <div className="cardComunidade">
          <div className="subCardComunidade">
+
+      <div className="card">
+         <div className="subCard">
             <img src={imgSrc} alt="" />
 
-            <p>{titulo}</p>
+            <p> <strong>{titulo}</strong> </p>
             <p>({membro} membros)</p>
             <hr />
-            <p>✔️ participar</p>
-            <p>👥 convidar amigos</p>
-            <p>🚷 denunciar abuso</p>
+            <p className="cardLink">✔️ participar</p>
+            <p className="cardLink">👥 convidar amigos</p>
+            <p className="cardLink">🚷 denunciar abuso</p>
          </div>
 
          <div className="textoComunidade">
