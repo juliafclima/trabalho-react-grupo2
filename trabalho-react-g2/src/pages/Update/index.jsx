@@ -9,10 +9,6 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const validationPost = yup.object().shape({
   titulo: yup.string().required("Preencha o título").max(40, "Até 40 caract."),
-  descricao: yup
-    .string()
-    .required("Preencha a descrição")
-    .max(100, "Até 100 caract."),
   conteudo: yup
     .string()
     .required("Preencha o conteúdo")
@@ -27,7 +23,9 @@ export default function Update() {
   const {
     register,
     handleSubmit,
-    formState: { errors }, reset } = useForm({ resolver: yupResolver(validationPost) });
+    formState: { errors },
+    reset
+  } = useForm({ resolver: yupResolver(validationPost) });
 
   useEffect(() => {
     axios.get(`https://6542dfe001b5e279de1fabce.mockapi.io/posts/${id}`)
@@ -43,7 +41,9 @@ export default function Update() {
       .put(`https://6542dfe001b5e279de1fabce.mockapi.io/posts/${id}`, data)
       .then(() => {
         console.log('Deu certo!');
-        navigate('/depoimento');
+        reset();
+        navigate('/depoimentos');
+         
       })
       .catch(() => {
         alert('Deu errado!');
@@ -68,17 +68,6 @@ export default function Update() {
                   {...register("titulo")}
                 />
                 <p className="error-message">{errors.titulo?.message}</p>
-              </div>
-
-              <div className="fields">
-                <label htmlFor="descricao">Descrição</label>
-                <input
-                  type="text"
-                  id="descricao"
-                  name="descricao"
-                  {...register("descricao")}
-                />
-                <p className="error-message">{errors.descricao?.message}</p>
               </div>
 
               <div className="fields">

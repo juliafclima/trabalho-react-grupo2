@@ -122,7 +122,7 @@ export default function Feed() {
 } */
 import React from 'react';
 import './style.css'; 
-import imgPerfil from '../../assets/image.png';
+import imgPerfil from '../../assets/img/perfil/image.png';
 import Header from '../../components/Header';
 
 const Perfil = () => {

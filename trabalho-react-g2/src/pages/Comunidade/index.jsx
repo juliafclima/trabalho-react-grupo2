@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.css";
+import Card from "./Card";
+import Header from "../../components/Header";
 import borracha from "../../assets/img/comunidade/comun1.png";
 import garfield from "../../assets/img/comunidade/comun2.png";
 import thony from "../../assets/img/comunidade/comun3.png";
@@ -8,205 +10,172 @@ import xororo from "../../assets/img/comunidade/comun5.png";
 import shampoo from "../../assets/img/comunidade/comun6.png";
 import comun7 from "../../assets/img/comunidade/comun7.png";
 import comun8 from "../../assets/img/comunidade/comun8.png";
+import carlucho from "../../assets/img/comunidade/carlucho.png";
+import lupa from "../../assets/img/comunidade/lupa.jpg";
+import violao from "../../assets/img/comunidade/violao.jpg";
 
-import Header from "../../components/Header";
+const comunidades = [
 
-export default function Comunidade() {
+
+
+  {
+    imgSrc: carlucho,
+    titulo: "Eu amo morangos!",
+    descricao: "Quem discordar está errado.",
+    idioma: "Português",
+    categoria: "Fruta",
+    tipo: "Pública",
+
+    membro: 6987,
+    dono: "Carlota",
+    data: "04/07/2014",
+  },
+
+  {
+    imgSrc: lupa,
+    titulo: "Professor, aumenta a letra!?",
+    descricao: "E nem é meme.",
+    idioma: "Português",
+    categoria: "Dificuldades",
+    tipo: "Pública",
+
+    membro: 17854,
+    dono: "Liliquinha",
+    data: "01/09/2014",
+  },
+
+  {
+    imgSrc: violao,
+    titulo: "Eu toco mesmo, e daí!?",
+    descricao: "Violões, tô dentro.",
+    idioma: "Português",
+    categoria: "Musissistas",
+    tipo: "Pública",
+
+    membro: 45698,
+    dono: "Julinhazinhainha",
+    data: "08/07/2010",
+  }, 
+  
+  {
+    imgSrc: borracha,
+    titulo: "Eu nunca terminei uma borracha.",
+
+    descricao: "Borrachas não merecem acabar!",
+    idioma: "Português",
+    categoria: "Borrachas",
+    tipo: "Pública",
+
+    membro: 10852,
+    dono: "Carlucho",
+    data: "05/11/2011",
+  },
+
+  {
+    imgSrc: garfield,
+    titulo: "Eu odeio acordar cedo.",
+    descricao: "Comunidade auto explicativa.",
+    idioma: "Português",
+    categoria: "Sono",
+    tipo: "Pública",
+
+    membro: 8653,
+    dono: "Seljan",
+    data: "07/06/2013",
+  },
+
+  {
+    imgSrc: thony,
+    titulo: "Eu colho flores e THONY RAMOS.",
+    descricao: "E carlucho rega flores.",
+    idioma: "Português",
+    categoria: "Pêlos",
+    tipo: "Pública",
+
+    membro: 9784,
+    dono: "Lucas José",
+    data: "22/06/2016",
+  },
+
+  {
+    imgSrc: sorvete,
+    titulo: "Queria sorvete mas era feijão.",
+    descricao: "Quem nunca sofreu essa decepção na vida!?",
+    idioma: "Português",
+    categoria: "Ilusão",
+    tipo: "Pública",
+
+    membro: 11256,
+    dono: "Roger",
+    data: "06/05/2009",
+  },
+
+  {
+    imgSrc: xororo,
+    titulo: "Não sei individualizar duplas.",
+    descricao: "Pra mim eles são uma pessoa só e ponto.",
+    idioma: "Português",
+    categoria: "Falta de personalidade",
+    tipo: "Pública",
+
+    membro: 4125,
+    dono: "Juju",
+    data: "17/06/2013",
+  },
+
+  {
+    imgSrc: shampoo,
+    titulo: "Eu leio o shampoo no banho.",
+    descricao: "É mentira pois eu não enxergo.",
+    idioma: "Português",
+    categoria: "Banho",
+    tipo: "Pública",
+
+    membro: 3987,
+    dono: "Carlinhos",
+    data: "04/09/2011",
+  },
+
+  {
+    imgSrc: comun7,
+    titulo: "Antes uma pedra no caminho...",
+    descricao: "Do que duas nos rins!",
+    idioma: "Português",
+    categoria: "Dor",
+    tipo: "Pública",
+
+    membro: 10365,
+    dono: "Seljan",
+    data: "15/07/2013",
+  },
+
+  {
+    imgSrc: comun8,
+    titulo: "Eu nunca morri na minha vida.",
+    descricao: "E que continue assim...",
+    idioma: "Português",
+    categoria: "Sorte",
+    tipo: "Pública",
+
+    membro: 11452,
+    dono: "Lucas",
+    data: "12/05/2008",
+  },
+
+
+];
+
+const Comunidade = () => {
   return (
-  <div>
+    <div>
       <Header />
       <div className="comunidade">
-        <div className="card">
-          <div className="cardimg"></div>
-          <div className="grande"></div>
-
-          {/* Card dentro do card */}
-          <div className="subCard">
-            <img src={borracha} alt="" />
-
-            <p>Eu nunca terminei uma borracha.</p>
-            <p>(10.852 membros)</p>
-            <p>------------------------------</p>
-            <p>✔️ participar</p>
-            <p>👥 convidar amigos</p>
-            <p>🚷 denunciar abuso</p>
-          </div>
-
-          <div className="texto">
-            <h1> Eu nunca terminei uma borracha.</h1>
-
-            <p>
-              <span>descrição: </span>Borrachas não merecem acabar!
-            </p>
-            <p>
-              <span>idioma: </span>Português
-            </p>
-            <p>
-              <span>categoria: </span>Borrachas
-            </p>
-            <p>
-              <span>dono: </span>Carlucho
-            </p>
-            <p>
-              <span>data: </span>05/11/2011
-            </p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="cardimg"></div>
-          <div className="grande"></div>
-
-          {/* Card dentro do card */}
-          <div className="subCard">
-            <img src={garfield} alt="" />
-
-            <p>Eu odeio acordar cedo.</p>
-            <p>(8.852 membros)</p>
-            <p>------------------------------</p>
-            <p>✔️ participar</p>
-            <p>👥 convidar amigos</p>
-            <p>🚷 denunciar abuso</p>
-          </div>
-
-          <div className="texto">
-            <h1>Eu odeio acordar cedo.</h1>
-            <p>Comunidade auto explicativa.</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="cardimg"></div>
-          <div className="grande"></div>
-
-          {/* Card dentro do card */}
-          <div className="subCard">
-            <img src={thony} alt="" />
-
-            <p>Eu colho flores e THONY RAMOS.</p>
-            <p>(7.231 membros)</p>
-            <p>------------------------------</p>
-            <p>✔️ participar</p>
-            <p>👥 convidar amigos</p>
-            <p>🚷 denunciar abuso</p>
-          </div>
-
-          <div className="texto">
-            <h1>Eu colho flores e TONY RAMOS.</h1>
-            <p>E carlucho rega flores.</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="cardimg"></div>
-          <div className="grande"></div>
-
-          {/* Card dentro do card */}
-          <div className="subCard">
-            <img src={sorvete} alt="" />
-
-            <p>Queria sorvete mas era feijão.</p>
-            <p>(6.001 membros)</p>
-            <p>------------------------------</p>
-            <p>✔️ participar</p>
-            <p>👥 convidar amigos</p>
-            <p>🚷 denunciar abuso</p>
-          </div>
-
-          <div className="texto">
-            <h1>Queria sorvete mas era feijão.</h1>
-            <p>Quem nunca sofreu essa decepção na vida!?</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="cardimg"></div>
-          <div className="grande"></div>
-
-          {/* Card dentro do card */}
-          <div className="subCard">
-            <img src={xororo} alt="" />
-
-            <p>Não sei individualizar duplas.</p>
-            <p>(15.871 membros)</p>
-            <p>------------------------------</p>
-            <p>✔️ participar</p>
-            <p>👥 convidar amigos</p>
-            <p>🚷 denunciar abuso</p>
-          </div>
-
-          <div className="texto">
-            <h1>Não sei individualizar duplas.</h1>
-            <p>Pra mim eles são uma pessoa só e ponto.</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="cardimg"></div>
-          <div className="grande"></div>
-
-          {/* Card dentro do card */}
-          <div className="subCard">
-            <img src={shampoo} alt="" />
-
-            <p>Eu leio o shampoo no banho.</p>
-            <p>(10.852 membros)</p>
-            <p>------------------------------</p>
-            <p>✔️ participar</p>
-            <p>👥 convidar amigos</p>
-            <p>🚷 denunciar abuso</p>
-          </div>
-
-          <div className="texto">
-            <h1>Eu leio o shampoo no banho.</h1>
-            <p>É mentira pois eu não enxergo.</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="cardimg"></div>
-          <div className="grande"></div>
-
-          {/* Card dentro do card */}
-          <div className="subCard">
-            <img src={comun7} alt="" />
-
-            <p>Antes uma pedra no caminho...</p>
-            <p>(10.005 membros)</p>
-            <p>------------------------------</p>
-            <p>✔️ participar</p>
-            <p>👥 convidar amigos</p>
-            <p>🚷 denunciar abuso</p>
-          </div>
-
-          <div className="texto">
-            <h1>Antes uma pedra no caminho...</h1>
-            <p>Do que duas nos rins!</p>
-          </div>
-        </div>
-
-        <div className="card">
-          <div className="cardimg"></div>
-          <div className="grande"></div>
-
-          {/* Card dentro do card */}
-          <div className="subCard">
-            <img src={comun8} alt="" />
-
-            <p>Eu nunca morri na minha vida.</p>
-            <p>(7.852 membros)</p>
-            <p>------------------------------</p>
-            <p>✔️ participar</p>
-            <p>👥 convidar amigos</p>
-            <p>🚷 denunciar abuso</p>
-          </div>
-
-          <div className="texto">
-            <h1>Eu nunca morri na minha vida.</h1>
-            <p>E que continue assim...</p>
-          </div>
-        </div>
+        {comunidades.map((comunidade, index) => (
+          <Card key={index} {...comunidade} />
+        ))}
       </div>
     </div>
   );
-}
+};
+
+export default Comunidade;

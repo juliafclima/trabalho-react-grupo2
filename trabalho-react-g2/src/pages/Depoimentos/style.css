@@ -1,122 +1,116 @@
 body {
   background-color: #759CCF;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .depoimentos {
-    max-width: 1000px;
-    margin: 0 auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
- 
-  }
-  
-  .depoimento {
-    border: 4px solid #ED2592;
-    padding: 10px;
-    margin: 10px;
-    background-color: #A7C1E3;
-    border-radius: 30px;
-  }
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.depoimento {
+  border: 4px solid #ED2592;
+  padding: 10px;
+  margin: 10px;
+  background-color: #A7C1E3;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.depoimento img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card-post {
+  background-color: #2F3644;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  color: #D2DAF5;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.line-post {
+  height: 2px;
+  background-color: #3E445B;
+  margin-bottom: 20px;
+}
+
+.fields {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 1.2rem;
+  color: #D2DAF5;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  font-size: 1.2rem;
+  padding: 10px;
+  color: black;
+}
+
+input {
+  height: 40px;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+.btn-post {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-post button {
+  font-weight: 800;
+  font-size: 1.3rem;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #3DECB1;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-post button:hover {
+  background-color: #26d18d;
+}
+
+.error-message {
+  color: rgb(240, 47, 47);
+}
+
+/* Estilos para tornar a página responsiva */
+@media (max-width: 768px) {
   .depoimento img {
-    width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: 100px;
-    border-radius: 50%; /* Para imagens redondas (opcional) */
-    margin-right: 10px; /* Adicione margem para separar a imagem do texto */
+    width: 80px;
+    height: 80px;
   }
 
-  .coluna-preview{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    border: #ED2592;
+  .card-post {
+    padding: 20px 10px;
   }
-  
-    .card-post {
-      background-color: #2F3644;
-      padding: 30px 50px;
-      border-radius: 15px;
-    }
-  
-    .card-post h1 {
-      /* font-family: Heebo; */
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 400;
-      text-align: center;
-      color: #D2DAF5;
-      font-size: 2.8rem;
-      margin-bottom: 5px;
-    }
-  
-    .line-post {
-      height: 2px;
-      background-color: #3E445B;
-    }
-  
-    .card-body-post {
-      margin-top: 25px;
-    }
-  
-    .fields {
-      margin-bottom: 20px;
-    }
-  
-    label {
-      display: block;
-      margin-bottom: 7px;
-      font-size: 1.2rem;
-      color: #D2DAF5;
-      /* font-family: Poppins; */
-      font-family: Arial, Helvetica, sans-serif;
-    }
-  
-    input,
-    textarea {
-      width: 100%;
-      border-radius: 10px;
-      border: 0;
-      outline: 0;
-      font-size: 1.2rem;
-      padding-left: 15px;
-      color: black;
-    }
-  
-    input {
-      height: 40px;
-    }
-  
-    textarea {
-      height: 150px;
-      resize: none;
-      padding-top: 10px;
-    }
-  
-    .btn-post {
-      margin-top: 30px;
-      text-align: center;
-    }
-  
-    .btn-post button {
-      /* font-family: Heebo; */
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 800;
-      font-size: 1.3rem;
-      padding: 5px 50px;
-      color: #fff;
-      background-color: #3DECB1;
-      border: 0;
-      border-radius: 10px;
-      cursor: pointer;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-      -o-border-radius: 10px;
-    }
-  
-    .btn-post button:hover {
-      background-color: #26d18d;
-    }
-  
-    .error-message {
-      color: rgb(240, 47, 47);
-    }
+
+  .btn-post button {
+    padding: 10px 20px;
+  }
+}

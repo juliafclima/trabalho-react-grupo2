@@ -58,8 +58,8 @@ export default function Login() {
     
 
     return (
-        <div className="container">
-            <h1>Login</h1>
+        <div className="containerLogin">
+            <h1 className='Login' >Login</h1>
             <form onSubmit={(e) => {
                 e.preventDefault(); 
                 authenticateUser(formData.email, formData.password); // Alterado aqui também
