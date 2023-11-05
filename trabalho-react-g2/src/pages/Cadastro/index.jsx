@@ -32,8 +32,10 @@ export default function Cadastro() {
    const handleSubmit = (e) => {
       e.preventDefault();
 
-      const url = 'http://localhost:8080/api/usuario/registro';
+      const url = `http://localhost:8080/api/usuario/registro?email=${formData.email}`;
 
+      console.log('teste')
+      console.log(JSON.stringify(formData))
       fetch(url, {
          method: 'POST',
          headers: {
