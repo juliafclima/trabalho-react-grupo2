@@ -9,15 +9,11 @@ import Header from "../../components/Header";
 
 
 const validationPost = yup.object().shape({
-  titulo: yup.string().required("Preencha o título").max(40, "Até 40 caract."),
-  descricao: yup
-    .string()
-    .required("Preencha a descrição")
-    .max(100, "Até 100 caract."),
+  titulo: yup.string().required("Preencha o título").max(60, "Até 60 caract."),
   conteudo: yup
     .string()
     .required("Preencha o conteúdo")
-    .max(300, "Até 300 caract."),
+    .max(500, "Até 500 caract."),
 });
 
 export default function Posts() {
@@ -45,7 +41,7 @@ export default function Posts() {
       <Header />
       <main>
         <div className="card-post">
-          <h1>Criar postagem</h1>
+          <h1>Criar depoimento</h1>
           <hr />
           <div className="card-body-post">
             <form action="#" onSubmit={handleSubmit(addPost)}>
@@ -58,17 +54,6 @@ export default function Posts() {
                   {...register("titulo")}
                 />
                 <p className="error-message">{errors.titulo?.message}</p>
-              </div>
-
-              <div className="fields">
-                <label htmlFor="descricao">Descrição</label>
-                <input
-                  type="text"
-                  id="descricao"
-                  name="descricao"
-                  {...register("descricao")}
-                />
-                <p className="error-message">{errors.descricao?.message}</p>
               </div>
 
               <div className="fields">
