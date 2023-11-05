@@ -23,7 +23,9 @@ export default function Update() {
   const {
     register,
     handleSubmit,
-    formState: { errors }, reset } = useForm({ resolver: yupResolver(validationPost) });
+    formState: { errors },
+    reset
+  } = useForm({ resolver: yupResolver(validationPost) });
 
   useEffect(() => {
     axios.get(`https://6542dfe001b5e279de1fabce.mockapi.io/posts/${id}`)
@@ -39,7 +41,9 @@ export default function Update() {
       .put(`https://6542dfe001b5e279de1fabce.mockapi.io/posts/${id}`, data)
       .then(() => {
         console.log('Deu certo!');
+        reset();
         navigate('/depoimentos');
+         
       })
       .catch(() => {
         alert('Deu errado!');
