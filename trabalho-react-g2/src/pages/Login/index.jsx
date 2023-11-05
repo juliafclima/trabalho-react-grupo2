@@ -22,14 +22,23 @@ export default function Login() {
 
     const authenticateUser = async (email, password) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/usuario/logar?email=${email}`);
-
+            const response = await fetch(`http://localhost:8080/api/usuario/logar?email=${formData.email}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password,
+                }),
+            });
+    
             if (response.ok) {
                 const userData = await response.json();
-
+    
                 if (userData.length > 0) {
                     const user = userData[0];
-                    if (user.password === password) { // Compara a senha fornecida com a senha do usuário retornado
+                    if (user.password === password) { 
                         setToken(user.id);
                         alert('Login bem-sucedido!');
                         navigateTo('/');
@@ -46,6 +55,7 @@ export default function Login() {
             console.error('Erro ao fazer login:', error);
         }
     };
+    
 
     return (
         <div className="containerLogin">
