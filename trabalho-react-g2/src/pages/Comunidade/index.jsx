@@ -15,6 +15,48 @@ import lupa from "../../assets/img/comunidade/lupa.jpg";
 import violao from "../../assets/img/comunidade/violao.jpg";
 
 const comunidades = [
+
+
+
+  {
+    imgSrc: carlucho,
+    titulo: "Eu amo morangos!",
+    descricao: "Quem discordar está errado.",
+    idioma: "Português",
+    categoria: "Fruta",
+    tipo: "Pública",
+
+    membro: 6987,
+    dono: "Carlota",
+    data: "04/07/2014",
+  },
+
+  {
+    imgSrc: lupa,
+    titulo: "Professor, aumenta a letra!?",
+    descricao: "E nem é meme.",
+    idioma: "Português",
+    categoria: "Dificuldades",
+    tipo: "Pública",
+
+    membro: 17854,
+    dono: "Liliquinha",
+    data: "01/09/2014",
+  },
+
+  {
+    imgSrc: violao,
+    titulo: "Eu toco mesmo, e daí!?",
+    descricao: "Violões, tô dentro.",
+    idioma: "Português",
+    categoria: "Musissistas",
+    tipo: "Pública",
+
+    membro: 45698,
+    dono: "Julinhazinhainha",
+    data: "08/07/2010",
+  }, 
+  
   {
     imgSrc: borracha,
     titulo: "Eu nunca terminei uma borracha.",
@@ -120,44 +162,7 @@ const comunidades = [
     data: "12/05/2008",
   },
 
-  {
-    imgSrc: carlucho,
-    titulo: "Eu amo morangos!",
-    descricao: "Quem discordar está errado.",
-    idioma: "Português",
-    categoria: "Fruta",
-    tipo: "Pública",
 
-    membro: 6987,
-    dono: "Carlota",
-    data: "04/07/2014",
-  },
-
-  {
-    imgSrc: lupa,
-    titulo: "Professor, aumenta a letra!?",
-    descricao: "E nem é meme.",
-    idioma: "Português",
-    categoria: "Dificuldades",
-    tipo: "Pública",
-
-    membro: 17854,
-    dono: "Liliquinha",
-    data: "01/09/2014",
-  },
-
-  {
-    imgSrc: violao,
-    titulo: "Eu toco mesmo, e daí!?",
-    descricao: "Violões, tô dentro.",
-    idioma: "Português",
-    categoria: "Musissistas",
-    tipo: "Pública",
-
-    membro: 45698,
-    dono: "Julinhazinhainha",
-    data: "08/07/2010",
-  },
 ];
 
 const Comunidade = () => {
