@@ -19,8 +19,10 @@
   justify-content: center;
   width: 90vw;
   max-width: 600px;
-  text-align: center;
-  padding: 20px;
+  text-align: left;
+  padding: 10px;
+
+ 
 }
 
 .card-img {
