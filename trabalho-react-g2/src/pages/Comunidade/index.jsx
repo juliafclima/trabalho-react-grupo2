@@ -1,4 +1,4 @@
-import React from "react";
+/*  import React from "react";
 import "./style.css";
 import borracha from "../../assets/img/comunidade/comun1.png";
 import garfield from "../../assets/img/comunidade/comun2.png";
@@ -17,10 +17,6 @@ export default function Comunidade() {
       <Header />
       <div className="comunidade">
         <div className="card">
-          <div className="cardimg"></div>
-          <div className="grande"></div>
-
-          {/* Card dentro do card */}
           <div className="subCard">
             <img src={borracha} alt="" />
 
@@ -36,16 +32,16 @@ export default function Comunidade() {
             <h1> Eu nunca terminei uma borracha.</h1>
 
             <p>
-              <span>descrição: </span>Borrachas não merecem acabar!
+              <span>Descrição: </span>Borrachas não merecem acabar!
             </p>
             <p>
-              <span>idioma: </span>Português
+              <span>Idioma: </span>Português
             </p>
             <p>
-              <span>categoria: </span>Borrachas
+              <span>Categoria: </span>Borrachas
             </p>
             <p>
-              <span>dono: </span>Carlucho
+              <span>Dono: </span>Carlucho
             </p>
             <p>
               <span>data: </span>05/11/2011
@@ -57,7 +53,6 @@ export default function Comunidade() {
           <div className="cardimg"></div>
           <div className="grande"></div>
 
-          {/* Card dentro do card */}
           <div className="subCard">
             <img src={garfield} alt="" />
 
@@ -79,7 +74,6 @@ export default function Comunidade() {
           <div className="cardimg"></div>
           <div className="grande"></div>
 
-          {/* Card dentro do card */}
           <div className="subCard">
             <img src={thony} alt="" />
 
@@ -101,7 +95,6 @@ export default function Comunidade() {
           <div className="cardimg"></div>
           <div className="grande"></div>
 
-          {/* Card dentro do card */}
           <div className="subCard">
             <img src={sorvete} alt="" />
 
@@ -123,7 +116,6 @@ export default function Comunidade() {
           <div className="cardimg"></div>
           <div className="grande"></div>
 
-          {/* Card dentro do card */}
           <div className="subCard">
             <img src={xororo} alt="" />
 
@@ -145,7 +137,6 @@ export default function Comunidade() {
           <div className="cardimg"></div>
           <div className="grande"></div>
 
-          {/* Card dentro do card */}
           <div className="subCard">
             <img src={shampoo} alt="" />
 
@@ -167,7 +158,6 @@ export default function Comunidade() {
           <div className="cardimg"></div>
           <div className="grande"></div>
 
-          {/* Card dentro do card */}
           <div className="subCard">
             <img src={comun7} alt="" />
 
@@ -189,7 +179,6 @@ export default function Comunidade() {
           <div className="cardimg"></div>
           <div className="grande"></div>
 
-          {/* Card dentro do card */}
           <div className="subCard">
             <img src={comun8} alt="" />
 
@@ -210,3 +199,43 @@ export default function Comunidade() {
     </div>
   );
 }
+ */
+import React from "react";
+import "./style.css";
+import Card from "./Card";
+import Header from "../../components/Header";
+import comun1 from "../../assets/img/comunidade/comun1.png";
+
+const comunidades = [
+  {
+    imgSrc: comun1,
+    titulo: "Eu nunca terminei uma borracha.",
+    descricao: "Borrachas não merecem acabar!",
+    membro: 10852,
+    dono: "Carlucho",
+    data: "05/11/2011"
+  },
+  /* {
+    imgSrc: ,
+    title: "",
+    description: "",
+    members: ,
+    owner: "",
+    date: ""
+  } */
+];
+
+const Comunidade = () => {
+  return (
+    <div>
+      <Header />
+      <div className="comunidade">
+        {comunidades.map((comunidade, index) => (
+          <Card key={index} {...comunidade} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Comunidade;
