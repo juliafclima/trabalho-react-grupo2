@@ -34,7 +34,7 @@ export default function Login() {
                         alert('Login bem-sucedido!');
                         navigateTo('/');
                     } else {
-                        alert('Senha incorreta. Tente novamente.');
+                        alert('Nome de Usuário ou Senha incorreta. Tente novamente.');
                     }
                 } else {
                     alert('Email não encontrado. Verifique as credenciais.');

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './style.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cadastro() {
+   
+   let navigate = useNavigate();
 
    const [formData, setFormData] = useState({
       celular: '',
@@ -41,7 +44,10 @@ export default function Cadastro() {
          .then(response => response.json())
          .then(data => {
             console.log('Resposta do servidor:', data);
-            alert("Usuário cadastrado!");
+            alert('Cadastro bem-sucedido!');
+            navigate('/login');
+
+            //lmpar o imput
          })
          .catch(error => {
             console.error('Erro ao enviar os dados:', error);

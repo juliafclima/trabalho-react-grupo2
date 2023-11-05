@@ -1,43 +1,99 @@
 .comunidade {
-  background-color: #a7c1e3;
- box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
-  height: 100vh;
-  width: 100vw;
-}
-
-.card {
-
-  border-radius: 8px;
- margin: 30px;
-  border: 2px solid #ed2592;
-  background-color: #759ccf;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100vh;
-
+    
+   box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
-}
-
-.card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 12%;
-
-}
-
-.card .texto {
-  width: 400px;
-  margin-left: 20px;
-  padding-left: 20px;
+  .card {
   
+    border-radius: 8px;
+    margin: 30px;
+    border: 1px solid #ed2592;
+    background-color:  #a7c1e3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+   
+  
+    
+  }
+  
+  .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    padding: 10%;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    
+  
+  }
+  
+  .card .texto {
+    width: 100%;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #ffffff;
+    
+    
+  }
+
+  .card .texto h1 {
+
+    font-size: 30px;
+  }
+
+  .card .texto p {
+    font-size: 15px;
+  }     
+
+
+.subCard {
+
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 15px;
+    
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 
-img .morangola {
+.card p {
 
-  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.subCard p {
+  font-size: 10px;
+  left: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+@media (max-width:542px){
+
+  .card{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+    
+  }
 }

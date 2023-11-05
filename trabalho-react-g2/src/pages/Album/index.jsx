@@ -1,8 +1,8 @@
-// ImageCarousel.js
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Clock from './clock'; // Importe o componente Clock
+import Clock from './clock';
+import Header from '../../components/Header';
 
 export default function ImageCarousel() {
   const [images, setImages] = useState([]);
@@ -31,7 +31,8 @@ export default function ImageCarousel() {
 
   return (
     <div>
-      <Clock /> {/* Adicione o componente Clock aqui */}
+      <Header />
+      <Clock />
       <h2>Álbum de Imagens</h2>
 
       <input

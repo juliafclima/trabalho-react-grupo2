@@ -6,8 +6,9 @@ body {
 }
 
 .navbar {
-   background-color: #759CCF;
+   
    padding: 10px 0;
+   
 }
 
 .nav-links {
@@ -16,12 +17,15 @@ body {
    justify-content: center;
    align-items: center;
    padding-top: 10px;
+   
 }
 
 .nav-links a {
    color: black;
    text-decoration: none;
    margin: 0 10px;
+   
+   
 }
 
 .nav-links a:hover {
@@ -33,6 +37,7 @@ body {
    -ms-border-radius: 5px;
    border-radius: 5px;
    color: white;
+   
 }
 
 .nav-logo {
@@ -40,6 +45,7 @@ body {
    color: #ED2592;
    font-weight: bolder;
    margin-left: 20px;
+   
 }
 
 .menu-icon {
@@ -47,6 +53,8 @@ body {
    cursor: pointer;
    color: black;
    font-size: 2rem;
+   
+   
 }
 
 @media (max-width: 768px) {
@@ -60,14 +68,19 @@ body {
       width: 100%;
       text-align: center;
       padding-bottom: 20px;
+      
+      
    }
 
    .nav-links.active {
       display: flex;
+ 
+      
    }
 
    .menu-icon {
       display: block;
       text-align: right;
+      
    }
 }

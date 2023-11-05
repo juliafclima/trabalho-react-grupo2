@@ -1,0 +1,455 @@
+/* 
+.fundo-azul {
+    width: 3100px;
+    height: 1950px;
+    display: flex;
+    background: #DCE8F4;
+    border-radius: 20px;
+    background: linear-gradient(to right, #DCE8F4, #A6C1E9);
+}
+
+.text-style {
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.link-style {
+    position: absolute;
+    color: #ED2590;
+    font-size: 25px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.title {
+    left: 52px;
+    top: 22px;
+    position: absolute;
+    color: #ED2590;
+    font-size: 140px;
+    font-family: 'Hello Angel', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.feed-container {
+    margin-left: 350px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: white;
+}
+
+.retangulo-bio {
+    margin-top: 250px;
+    margin-left: 50px;
+    width: 471px;
+    height: 1000px;
+    position: absolute;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.nome-bio {
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    font-family: 'Adamina', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+
+}
+
+.barra-rosa {
+    width: 16px;
+    height: 63px;
+    position: absolute;
+    background: #ED2590;
+    border-radius: 40px;
+    border: 1px rgba(0, 0, 0, 0) solid;
+}
+
+.pink-background {
+    width: 386px;
+    height: 398px;
+    position: absolute;
+    background: #ED2590;
+    border-radius: 9999px;
+}
+
+.foto-perfil {
+    width: 379px;
+    height: 389px;
+    position: absolute;
+    border-top-left-radius: 193px;
+    border-top-right-radius: 193px;
+    border-bottom-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+}
+
+.iconezinhos {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+}
+
+.barra-cinza {
+    width: 405px;
+    height: 0;
+    position: absolute;
+    border: 2px #C9C9C9 solid;
+}
+
+.info-perfil {
+    width: 429px;
+    height: 69px;
+    position: absolute;
+    color: #413B3B;
+    font-size: 19.80px;
+    font-family: 'Adamina', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+
+.amigos-container {
+    width: 534px;
+    height: 704px;
+    left: 1840px;
+    top: 48px;
+    position: absolute;
+}
+
+.retangulo-amigos {
+    width: 534px;
+    height: 704px;
+    position: absolute;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.img-amigos {
+    width: 162px;
+    height: 167px;
+    position: absolute;
+    border-radius: 100px;
+}
+
+.communidades-container {
+    width: 534px;
+    height: 1297px;
+    left: 1840px;
+    top: 779px;
+    position: absolute;
+}
+
+.retangulo-comunidades {
+    width: 534px;
+    height: 1208px;
+    position: absolute;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.rounded-image {
+    width: 188px;
+    height: 178px;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.letrinhas {
+    text-align: center;
+    font-size: 19px;
+    position: absolute;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.perfil-container {
+    width: 1228px;
+    height: 1179px;
+    left: 583px;
+    top: 65px;
+    position: absolute;
+}
+
+.retangulo-perfil {
+    width: 1228px;
+    height: 1179px;
+    position: absolute;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.barrinha-azul {
+    width: 1163.50px;
+    height: 43px;
+    left: 20px;
+    top: 182px;
+    position: absolute;
+    border: 3px #C9C9C9 solid;
+    border-radius: 20px;
+    z-index: 0;
+    background: #dce8f4;
+}
+
+.nome-principal {
+    left: 34px;
+    top: 76px;
+    color: black;
+    font-size: 53.24px;
+    font-weight: 400;
+    position: absolute;
+}
+
+.text-style.subtitulo {
+    left: 50px;
+    top: 182px;
+    color: black;
+    font-size: 28.38px;
+    font-weight: 400;
+    z-index: 2;
+}
+
+.linha-cinza {
+    width: 1163.50px;
+    height: 0px;
+    left: 34px;
+    top: 650.50px;
+    position: absolute;
+    border: 2px #C9C9C9 solid;
+}
+
+.text-style.fonte-cinza {
+    width: 227px;
+    height: 37px;
+    position: absolute;
+    color: #B2B1B4;
+    font-size: 31.38px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.pink-border {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+    border: 4px #ED2590 solid;
+}
+
+.pink-border-long {
+    width: 480px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+    border: 4px #ED2590 solid;
+}
+
+.pink-border-medium-long {
+    width: 310px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+    border: 4px #ED2590 solid;
+}
+
+.pink-border-medium {
+    width: 220px;
+    height: 40px;
+    position: absolute;
+    border-radius: 20px;
+    border: 4px #ED2590 solid;
+}
+
+.icon {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+
+.heart-icon {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+}
+
+.star-icon {
+    width: 36px;
+    height: 35px;
+    position: absolute;
+}
+
+.like-icon {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+}
+
+.fonte {
+    position: absolute;
+    color: black;
+    font-size: 27.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.fonte.estado-civil {
+    left: 355px;
+    top: 439px;
+}
+
+.fonte.quem-sou-eu {
+    left: 355px;
+    top: 501px;
+}
+
+.fonte.pais-fonte {
+    left: 355px;
+    top: 600px;
+}
+
+.depoimentos-container {
+    width: 1228px;
+    height: 475px;
+    left: 583px;
+    top: 1512px;
+    position: absolute;
+}
+
+.retangulo-depoimentos {
+    width: 1228px;
+    height: 475px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.titulo {
+    width: 641px;
+    height: 38.50px;
+    left: 44px;
+    top: 45.45px;
+    position: absolute;
+    color: black;
+    font-size: 31.38px;
+    font-family: Arial;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.imagem-depoimentos {
+    width: 290px;
+    height: 285px;
+    left: 105px;
+    top: 145px;
+    position: absolute;
+    border-radius: 100px;
+}
+
+.nome-depoimentos {
+    left: 434px;
+    top: 159px;
+    position: absolute;
+    color: black;
+    font-size: 53.24px;
+    font-family: Arial;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.comentario {
+    width: 195px;
+    left: 446px;
+    top: 253px;
+    position: absolute;
+    color: black;
+    font-size: 28.38px;
+    font-family: Arial;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.horario {
+    width: 266px;
+    height: 37px;
+    left: 432px;
+    top: 341px;
+    position: absolute;
+    color: #B2B1B4;
+    font-size: 31.38px;
+    font-family: Arial;
+    font-weight: 400;
+    word-wrap: break-word;
+} */
+
+
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    padding-bottom: 100px;
+}
+
+.perfil-info {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+}
+
+.perfil-left {
+    margin-right: 20px;
+}
+
+.perfil-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.perfil-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.perfil-right {
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .perfil-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .perfil-left {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
