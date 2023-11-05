@@ -4,13 +4,13 @@ import './style.css';
 
 export default function Login() {
     const [formData, setFormData] = useState({
-        nomeUsuario: '',
-        senha: '',
+        email: '', // Substituído de nomeUsuario para email
+        password: '', // Substituído de senha para password
     });
 
     const navigateTo = useNavigate();
 
-    const [token, setToken] = useState(null); // Novo estado para armazenar o token
+    const [token, setToken] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -18,28 +18,26 @@ export default function Login() {
             ...formData,
             [name]: value,
         });
-        console.log(formData)
     };
 
-    const authenticateUser = async (nomeUsuario, senha) => {
+    const authenticateUser = async (email, password) => {
         try {
-            // Faz a requisição para obter os detalhes do usuário pelo nome de usuário
-            const response = await fetch(`https://6513726b8e505cebc2e9db94.mockapi.io/clientes?nomeUsuario=${nomeUsuario}`);
+            const response = await fetch(`http://localhost:8080/api/usuario/logar?email=${email}`);
 
             if (response.ok) {
                 const userData = await response.json();
 
                 if (userData.length > 0) {
                     const user = userData[0];
-                    if (user.senha === senha) { // Compara a senha fornecida com a senha do usuário retornado
-                        setToken(user.id); // Salva o ID do usuário no estado
-                        
+                    if (user.password === password) { // Compara a senha fornecida com a senha do usuário retornado
+                        setToken(user.id);
+                        alert('Login bem-sucedido!');
                         navigateTo('/');
                     } else {
                         alert('Nome de Usuário ou Senha incorreta. Tente novamente.');
                     }
                 } else {
-                    alert('Nome de usuário não encontrado. Verifique as credenciais.');
+                    alert('Email não encontrado. Verifique as credenciais.');
                 }
             } else {
                 alert('Erro ao buscar usuário. Tente novamente mais tarde.');
@@ -53,27 +51,27 @@ export default function Login() {
         <div className="container">
             <h1>Login</h1>
             <form onSubmit={(e) => {
-                e.preventDefault(); // Evita o comportamento padrão do formulário
-                authenticateUser(formData.nomeUsuario, formData.senha);
+                e.preventDefault(); 
+                authenticateUser(formData.email, formData.password); // Alterado aqui também
             }}>
                 <div className="form-group">
-                    <label htmlFor="nomeUsuario">Nome de Usuário:</label>
+                    <label htmlFor="email">Email:</label>
                     <input
                         type="text"
-                        id="nomeUsuario"
-                        name="nomeUsuario"
-                        value={formData.nomeUsuario}
+                        id="email"
+                        name="email"
+                        value={formData.email}
                         onChange={handleChange}
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="senha">Senha:</label>
+                    <label htmlFor="password">Senha:</label>
                     <input
                         type="password"
-                        id="senha"
-                        name="senha"
-                        value={formData.senha}
+                        id="password"
+                        name="password"
+                        value={formData.password}
                         onChange={handleChange}
                         required
                     />
