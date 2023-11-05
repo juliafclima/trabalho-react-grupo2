@@ -1,68 +1,47 @@
-/* Estilos Gerais */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-}
-
-.container {
+.containerAlbum {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-h1, h2, h3 {
-  color: #333;
-}
-
-/* Botões */
-button {
+.like-buttonAlbum {
   background-color: #007bff;
   color: #fff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1em;
   border-radius: 4px;
 }
 
-button:hover {
+.like-buttonAlbum:hover {
   background-color: #0056b3;
 }
 
-/* Formulários */
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-}
-
-input {
+.inputAlbum {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1em;
 }
 
-/* Imagens */
-.img-container {
-  max-width: 50%;
+.img-containerAlbum {
+  width: 100%;
+  max-width: 50em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.img-containerAlbum > img {
+  width: 100%;
   height: auto;
-  margin-bottom: 20px;
 }
 
-.img-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Cores Personalizadas */
 .primary-color {
   color: #ed2592;
 }
@@ -83,30 +62,32 @@ input {
   color: #ffffff;
 }
 
-.carousel-image {
-  border: 30px solid #791010; /* Adicione a borda com a cor e largura desejadas */
-  border-radius: 300px; /* Adicione bordas arredondadas, se preferir */
-  max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+.carousel-imageAlbum {
+  border: 1.5em solid #791010;
+  border-radius: 50%;
+  max-width: 100%;
 }
-.carousel {
+
+.carouselAlbum {
   overflow: hidden;
 }
 
-.carousel .slide img {
+.carouselAlbum .slideAlbum img {
   max-width: 100%;
   height: auto;
 }
-.like-button {
-  background-color: #28a745; /* Cor verde para o botão "Like" */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 4px;
-  margin-top: 10px; /* Adicionando algum espaço entre o botão e a imagem */
-}
 
-.like-button:hover {
-  background-color: #218838; /* Cor verde escura ao passar o mouse sobre o botão */
+@media (max-width: 768px) {
+  .containerAlbum {
+    padding: 10px;
+  }
+
+  .like-buttonAlbum,
+  .inputAlbum {
+    font-size: 0.9em;
+  }
+
+  .carousel-imageAlbum {
+    border-width: 1em;
+  }
 }

@@ -3,8 +3,8 @@ import "./style.css";
 
 const Card = ({ imgSrc, titulo, descricao, idioma, categoria, tipo, membro, dono, data, }) => {
    return (
-      <div className="card">
-         <div className="subCard">
+      <div className="cardComunidade">
+         <div className="subCardComunidade">
             <img src={imgSrc} alt="" />
 
             <p>{titulo}</p>
@@ -15,7 +15,7 @@ const Card = ({ imgSrc, titulo, descricao, idioma, categoria, tipo, membro, dono
             <p>🚷 denunciar abuso</p>
          </div>
 
-         <div className="texto">
+         <div className="textoComunidade">
             <h1>{titulo}</h1>
             <p>
                <span>descrição: </span>

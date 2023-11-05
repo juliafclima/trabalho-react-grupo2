@@ -12,8 +12,8 @@ export default function ImageCarousel() {
   const handleImageUpload = (e) => {
     const newImages = [...images];
 
-    for (let i = 0; i < e.target.files.length; i++) {
-      const file = e.target.files[i];
+    for (const element of e.target.files) {
+      const file = element
       const imageUrl = URL.createObjectURL(file);
       newImages.push(imageUrl);
     }
@@ -33,9 +33,7 @@ export default function ImageCarousel() {
     <div>
       <Header />
       <Clock />
-      <h2>Álbum de Imagens</h2>
-
-      <input
+      <input className='inputAlbumAlbum'
         type="file"
         accept="image/*"
         multiple
@@ -62,12 +60,11 @@ export default function ImageCarousel() {
               <img
                 src={image}
                 alt={`Imagem ${index}`}
-                className="carousel-image"
+                className="carousel-imageAlbum"
               />
-              <button className="like-button" onClick={() => handleLikeClick(index)}>
+              <button className="like-buttonAlbum" onClick={() => handleLikeClick(index)}>
                 Like
               </button>
-              <p>Likes: {likes[index]}</p>
             </div>
           ))}
         </Carousel>
