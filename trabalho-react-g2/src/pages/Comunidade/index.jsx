@@ -19,6 +19,10 @@ const comunidades = [
     imgSrc: borracha,
     titulo: "Eu nunca terminei uma borracha.",
     descricao: "Borrachas não merecem acabar!",
+    idioma: "Português",
+  categoria: "Borrachas",
+  tipo: "Pública",
+
     membro: 10852,
     dono: "Carlucho",
     data: "05/11/2011"

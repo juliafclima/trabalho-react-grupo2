@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const Card = ({ imgSrc, titulo, descricao, membro, dono, data }) => {
+const Card = ({ imgSrc, titulo, descricao, idioma, categoria, tipo, membro, dono, data, }) => {
    return (
       <div className="card">
          <div className="subCard">
@@ -18,15 +18,28 @@ const Card = ({ imgSrc, titulo, descricao, membro, dono, data }) => {
          <div className="texto">
             <h1>{titulo}</h1>
             <p>
-               <span>Descrição: </span>
+               <span>descrição: </span>
                {descricao}
             </p>
             <p>
-               <span>Dono: </span>
+               <span>idioma: </span>
+               {idioma}
+
+            </p>
+            <p>
+               <span>categoria: </span>
+               {categoria}
+            </p>
+            <p>
+               <span>tipo: </span>
+               {tipo}
+            </p>
+            <p>
+               <span>dono: </span>
                {dono}
             </p>
             <p>
-               <span>Data: </span>
+               <span>data: </span>
                {data}
             </p>
          </div>
