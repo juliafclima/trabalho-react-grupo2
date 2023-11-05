@@ -1,13 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import Header from '../../components/Header';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
 
 export default function Depoimentos() {
-    
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://6542dfe001b5e279de1fabce.mockapi.io/posts")
+      .then((response) => {
+        setPosts(response.data);
+        console.log(response.data);
+      })
+      .catch(() => {
+        console.log("Deu errado !");
+      });
+  }, []);
+
+  function deletePost(id) {
+    axios.delete(`https://6542dfe001b5e279de1fabce.mockapi.io/posts/${id}`);
+    setPosts(posts.filter(post => post.id !== id));
+  }
+
   function DepoimentoPreview({ nome, mensagem }) {
     const previewLength = 100;
     const mensagemPreview = mensagem.props.children[0].substring(0, previewLength) + '...';
-  
+
     return (
       <div className="depoimento-preview">
         <p>Nome: {nome}</p>
@@ -15,6 +36,7 @@ export default function Depoimentos() {
       </div>
     );
   }
+
   const depoimentos = [
     {
       nome: 'João',
@@ -76,14 +98,48 @@ export default function Depoimentos() {
     },
   ];
 
-
-
   return (
     <>
       <Header />
 
+      <Link to='/posts'>
+        <button style={{ marginRight: '20px' }}>Adicionar novo Post</button>
+      </Link>
       <div className="depoimentos">
-        <h2>Depoimentos de Amigos</h2>
+         <h2>Depoimentos de Amigos</h2>
+      <main>
+        <div className="cards">
+          {posts.map((post, key) => {
+            return (
+              <div className="card" key={key}>
+                <header>
+                  <h2>{post.titulo}</h2>
+                </header>
+                <div className="line"></div>
+
+                <p>{post.descricao}</p>
+
+                <div className="btns">
+                  <div className="btn-edit">
+                    <Link to={`/update/${post.id}`}>
+                      <button>Editar</button>
+                    </Link>
+                  </div>
+
+                  <div className="btn-delete">
+                    <button onClick={() => deletePost(post.id)}>Apagar</button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </main>
+      </div>
+     
+
+      {/* <div className="depoimentos">
+        
         {depoimentos.map((depoimento, index) => (
           <div key={index} className="depoimento">
             <img src={depoimento.imagem} alt={depoimento.nome} />
@@ -91,7 +147,7 @@ export default function Depoimentos() {
             <p>Mensagem: {depoimento.mensagem}</p>
           </div>
         ))}
-      </div>
-  </>
+      </div> */}
+    </>
   );
 }

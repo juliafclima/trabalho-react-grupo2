@@ -13,8 +13,8 @@ export default function AppRouter() {
   return (
     <div>
       <Routes>
-        < Route path="/" element={< Posts />} />
-        < Route path="/perfil" element={< Perfil />} />
+        < Route path="/" element={< Perfil />} />
+        < Route path="/posts" element={< Posts />} />
         < Route path="/depoimentos" element={< Depoimentos />} />
         < Route path="/comunidade" element={< Comunidade />} />
         < Route path="/album" element={< Album />} />

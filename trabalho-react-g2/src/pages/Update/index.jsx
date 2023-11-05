@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../components/Header';
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -6,7 +6,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import "./style.css";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import { useEffect } from 'react';
 
 const validationPost = yup.object().shape({
   titulo: yup.string().required("Preencha o título").max(40, "Até 40 caract."),
@@ -44,7 +43,7 @@ export default function Update() {
       .put(`https://6542dfe001b5e279de1fabce.mockapi.io/posts/${id}`, data)
       .then(() => {
         console.log('Deu certo!');
-        navigate('/');
+        navigate('/depoimento');
       })
       .catch(() => {
         alert('Deu errado!');

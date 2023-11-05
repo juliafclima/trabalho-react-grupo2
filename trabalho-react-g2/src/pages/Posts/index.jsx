@@ -33,7 +33,7 @@ export default function Posts() {
       .post("https://6542dfe001b5e279de1fabce.mockapi.io/posts", data)
       .then(() => {
         console.log('Deu certo!');
-        navigate('/');
+        navigate('/depoimentos');
       })
       .catch(() => {
         alert('Deu errado!');
