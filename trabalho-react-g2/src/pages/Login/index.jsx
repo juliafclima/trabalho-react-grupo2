@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
 import Footer from '../../components/Footer';
-
+import HeaderLogin from '../../components/HeaderLogin';
 
 export default function Login() {
     const [formData, setFormData] = useState({
@@ -59,6 +59,7 @@ export default function Login() {
 
     return (
         <div className="pagina-login">
+            <HeaderLogin />
         <div className="containerLogin">
             <h1 className='Login' >Login</h1>
             <form onSubmit={(e) => {
