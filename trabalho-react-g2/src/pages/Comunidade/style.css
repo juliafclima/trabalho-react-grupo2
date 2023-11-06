@@ -37,7 +37,7 @@
   padding: 15px;
   margin: 10px;
   width: 100px;
-  max-width: 100px;
+  /* max-width: 100px; */
   text-overflow: ellipsis;
   overflow: hidden;
   word-wrap: break-word;

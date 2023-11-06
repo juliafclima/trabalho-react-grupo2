@@ -58,7 +58,7 @@ export default function Update() {
           <h1>Atualizar depoimento</h1>
           <hr />
           <div className="card-body-post">
-            <form action="#" onSubmit={handleSubmit(addPost)}>
+            <form className='formulario' action="#" onSubmit={handleSubmit(addPost)}>
               <div className="fields">
                 <label htmlFor="titulo">Titulo</label>
                 <input
@@ -73,8 +73,8 @@ export default function Update() {
               <div className="fields">
                 <label htmlFor="conteudo">Conteúdo</label>
                 <textarea
-                  cols="30"
-                  rows="10"
+                  cols="50"
+                  rows="11"
                   type="text"
                   id="conteudo"
                   {...register("conteudo")}

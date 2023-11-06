@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import Card from "./Card";
+
 import Header from "../../components/Header";
 import borracha from "../../assets/img/comunidade/comun1.png";
 import garfield from "../../assets/img/comunidade/comun2.png";
@@ -13,6 +14,8 @@ import comun8 from "../../assets/img/comunidade/comun8.png";
 import carlucho from "../../assets/img/comunidade/carlucho.png";
 import lupa from "../../assets/img/comunidade/lupa.jpg";
 import violao from "../../assets/img/comunidade/violao.jpg";
+import Footer from '../../components/Footer';
+
 
 const comunidades = [
   {
@@ -180,6 +183,7 @@ const Comunidade = () => {
           <Card key={index} {...comunidade} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

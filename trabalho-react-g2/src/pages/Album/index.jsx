@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
 
 export default function ImageCarousel() {
   const [images, setImages] = useState([]);
@@ -68,6 +70,7 @@ export default function ImageCarousel() {
           ))}
         </Carousel>
       )}
+      <Footer />
     </div>
   );
 }
