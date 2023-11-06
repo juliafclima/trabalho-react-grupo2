@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import Card from "./Card";
+
 import Header from "../../components/Header";
 import borracha from "../../assets/img/comunidade/comun1.png";
 import garfield from "../../assets/img/comunidade/comun2.png";
