@@ -13,6 +13,8 @@ import comun8 from "../../assets/img/comunidade/comun8.png";
 import carlucho from "../../assets/img/comunidade/carlucho.png";
 import lupa from "../../assets/img/comunidade/lupa.jpg";
 import violao from "../../assets/img/comunidade/violao.jpg";
+import Footer from '../../components/Footer';
+
 
 const comunidades = [
   {
@@ -180,6 +182,7 @@ const Comunidade = () => {
           <Card key={index} {...comunidade} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

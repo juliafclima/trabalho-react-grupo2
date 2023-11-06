@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../components/Footer';
+
 
 export default function Cadastro() {
    
@@ -19,6 +21,7 @@ export default function Cadastro() {
       roles:[
           'VENDEDOR'],
       telefone: ''
+      
    });
    const [cadastroConcluido, setCadastroConcluido] = useState(false);
    const handleChange = (e) => {
@@ -57,6 +60,7 @@ export default function Cadastro() {
    };
 
    return (
+      <>
       <div className="containerCadastro">
          <h1>Cadastro de Cliente</h1>
          {cadastroConcluido && <p>Cadastro concluído! Obrigado por se cadastrar.</p>}
@@ -171,6 +175,11 @@ export default function Cadastro() {
             </div>
             <button className='buttonCadastro' type="submit">Cadastrar</button>
          </form>
+        
+         
       </div>
+      <Footer />
+      </>
+
    );
 }

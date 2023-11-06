@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
+import Footer from '../../components/Footer';
+
 
 export default function Login() {
     const [formData, setFormData] = useState({
@@ -58,6 +60,7 @@ export default function Login() {
     
 
     return (
+        <div className="pagina-login">
         <div className="containerLogin">
             <h1 className='Login' >Login</h1>
             <form onSubmit={(e) => {
@@ -89,5 +92,7 @@ export default function Login() {
                 <button className='buttonLogin' type="submit">Login</button>
             </form>
         </div>
+            <Footer />
+            </div>
     );
 }

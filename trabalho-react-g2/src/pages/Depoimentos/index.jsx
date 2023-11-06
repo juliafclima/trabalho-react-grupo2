@@ -4,6 +4,8 @@ import Header from '../../components/Header';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import GeradorAleatorio from './GeradorAleatorio';
+import Footer from '../../components/Footer';
+
 
 export default function Depoimentos() {
   const [posts, setPosts] = useState([]);
@@ -64,6 +66,7 @@ export default function Depoimentos() {
           </div>
         </main>
       </div>
+            <Footer />
     </>
   );
 }

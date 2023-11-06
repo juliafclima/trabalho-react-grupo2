@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../../components/Header';
 import "./style.css"
+import Footer from '../../components/Footer';
+
 
 export default function (){
   return (
@@ -12,6 +14,7 @@ export default function (){
         <h1 className='h1Erro'>Mas não se preocupe!</h1>
         <p className='pErro'>Tente novamente, pois erro não é o fim da linha ;)</p>
       </div>
+      <Footer />
     </div>
   );
 };
