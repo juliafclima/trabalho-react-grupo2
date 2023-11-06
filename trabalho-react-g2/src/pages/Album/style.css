@@ -1,11 +1,21 @@
+.album {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .containerAlbum {
   max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .like-buttonAlbum {
@@ -16,6 +26,7 @@
   cursor: pointer;
   font-size: 1em;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .like-buttonAlbum:hover {
@@ -37,7 +48,7 @@
   text-align: center;
 }
 
-.img-containerAlbum > img {
+.img-containerAlbum>img {
   width: 100%;
   height: auto;
 }

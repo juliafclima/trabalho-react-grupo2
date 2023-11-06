@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Clock from './clock';
 import Header from '../../components/Header';
 
 export default function ImageCarousel() {
@@ -30,10 +29,9 @@ export default function ImageCarousel() {
   };
 
   return (
-    <div>
+    <div className='album'>
       <Header />
-      <Clock />
-      <input className='inputAlbumAlbum'
+      <input className='inputAlbum'
         type="file"
         accept="image/*"
         multiple

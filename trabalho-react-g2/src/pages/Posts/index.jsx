@@ -41,7 +41,7 @@ export default function Posts() {
   return (
     <div>
       <Header />
-      <main>
+      <main className="divPrincipal">
         <div className="card-post">
           <h1>Criar depoimento</h1>
           <hr />

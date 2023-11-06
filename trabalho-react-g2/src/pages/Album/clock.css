@@ -1,22 +1,23 @@
 .clock {
-    font-size: 20px;
-    background-color: #222;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: right;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  color: red;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: right;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .clock {
+    font-size: 16px;
+    padding: 8px 16px;
   }
-  
-  @media (max-width: 768px) {
-    .clock {
-      font-size: 16px;
-    }
+}
+
+@media (max-width: 576px) {
+  .clock {
+    font-size: 12px;
+    padding: 6px 12px;
   }
-  
-  @media (max-width: 576px) {
-    .clock {
-      font-size: 12px;
-    }
-  }
-  
+}

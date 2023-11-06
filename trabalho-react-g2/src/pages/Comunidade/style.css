@@ -1,7 +1,6 @@
 .comunidade {
   box-sizing: border-box;
   padding: 20px;
-  margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,9 +17,10 @@
   align-items: center;
   justify-content: space-around;
   width: 90vw;
-  max-width: 900px;
+  max-width: 500px;
   text-align: left;
   padding: 10px;
+  word-wrap: break-word;
 }
 
 .card-imgComunidade {
@@ -36,30 +36,32 @@
   border-radius: 8px;
   padding: 15px;
   margin: 10px;
-  width: 200px; /* Tamanho fixo para subCard */
-  max-width: 200px; /* Garante que o tamanho não ultrapasse 350px */
+  width: 200px;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
-.card-text {
-  width: 100%;
-  padding: 10px;
-  background-color: #ffffff;
-  text-align: left;
-  height: 100px; /* Tamanho fixo para o texto */
-  overflow: hidden; /* Para esconder o conteúdo que ultrapassar 100px de altura */
-  white-space: nowrap;
-  text-overflow: ellipsis; /* Adicione isso se desejar que o texto seja cortado com reticências se for muito longo */
+.textComunidade {
+  max-width: 200px;
+  /* Defina o tamanho máximo para o texto */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Corta o texto com reticências se ultrapassar o limite de altura */
 }
 
-span {
+.spanComunidade {
   opacity: 0.6;
 }
 
-.cardLink {
+.cardLinkComunidade {
   cursor: pointer;
+  transition: color 0.3s ease;
+  /* Adicionando transição suave para a mudança de cor */
 }
 
-.cardLink:hover {
+.cardLinkComunidade:hover {
   color: #ed2592;
 }
 
@@ -75,5 +77,7 @@ span {
 
   .subCardComunidade {
     width: 350px;
+    max-width: 350px;
+    /* Evita que o subCard ultrapasse 350px de largura */
   }
 }

@@ -22,7 +22,7 @@ const GeradorAleatorio = () => {
 
    return (
       <div>
-         <h2>Nome: {nome}</h2>
+         <h2>{nome}</h2>
          <img src={imagem} alt="Imagem Aleatória" />
       </div>
    );

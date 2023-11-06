@@ -30,34 +30,39 @@ export default function Depoimentos() {
       <Header />
 
       <Link to='/posts'>
-        <button style={{ marginRight: '20px' }}>Adicionar novo Depoimento</button>
+        <div className="containerNovoPosts">
+          <button className='buttonNovoDepoimento'>Adicionar novo Depoimento</button>
+        </div>
+
       </Link>
       <div className="depoimentos">
-      <main>
-        <div className="cards">
-          {posts.map((post, key) => {
-            return (
-              <div className="card" key={key}>
-                <header>
-                  <GeradorAleatorio />
-                  <h2>{post.titulo}</h2>
-                  <p>{post.conteudo}</p>
-                  <div className="btns">
-                  <div className="btn-edit">
-                    <Link to={`/update/${post.id}`}>
-                      <button>Editar</button>
-                    </Link>
-                  </div>
-                  <div className="btn-delete">
-                    <button onClick={() => deletePost(post.id)}>Apagar</button>
-                  </div>
+        <main>
+          <div className="cardsDepoimentos">
+            {posts.map((post, key) => {
+              return (
+                <div className="cardDepoimentos" key={key}>
+                  <header className='headerDepoimentos'>
+                    <GeradorAleatorio />
+                    <h2>{post.titulo}</h2>
+                    <p>{post.conteudo}</p>
+                    <div className="btnsDepoimentos">
+                      <div className="btnsDepoimentos">
+                        <div className="btn-editDepoimentos">
+                          <Link to={`/update/${post.id}`}>
+                            <button className='buttonDepoimentos'>Editar</button>
+                          </Link>
+                        </div>
+                        <div className="btn-deleteDepoimentos">
+                          <button className='buttonDepoimentos' onClick={() => deletePost(post.id)}>Apagar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
                 </div>
-                </header>
-              </div>
-            );
-          })}
-        </div>
-      </main>
+              );
+            })}
+          </div>
+        </main>
       </div>
     </>
   );

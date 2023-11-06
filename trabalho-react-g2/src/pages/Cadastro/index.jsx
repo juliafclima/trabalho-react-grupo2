@@ -57,78 +57,72 @@ export default function Cadastro() {
    };
 
    return (
-      <div className="container">
+      <div className="containerCadastro">
          <h1>Cadastro de Cliente</h1>
          {cadastroConcluido && <p>Cadastro concluído! Obrigado por se cadastrar.</p>}
          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-               <label htmlFor="nome">Nome:</label>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="nome">Nome:</label>
                <input
                   type="text"
                   id="nome"
+                  className='inputCadastro'
                   name="nome"
                   value={formData.nome}
                   onChange={handleChange}
                   required
                />
             </div>
-            <div className="form-group">
-               <label htmlFor="nomeUsuario">Nome de Usuário:</label>
+            <div className="form-groupCadastro">
+               <label htmlFor="nomeUsuario" className='labelCadastro'>Nome de Usuário:</label>
                <input
                   type="text"
                   id="nomeUsuario"
+                  className='inputCadastro'
                   name="nomeUsuario"
                   value={formData.nomeUsuario}
                   onChange={handleChange}
                   required
                />
             </div>
-            <div className="form-group">
-               <label htmlFor="cpf">CPF:</label>
+            <div className="form-groupCadastro">
+               <label htmlFor="cpf" className='labelCadastro'>CPF:</label>
                <input
                   type="text"
                   id="cpf"
                   name="cpf"
+                  className='inputCadastro'
                   value={formData.cpf}
                   onChange={handleChange}
                   required
                />
             </div>
-            {/* <div className="form-group">
-               <label htmlFor="senha">Senha:</label>
-               <input
-                  type="password"
-                  id="senha"
-                  name="senha"
-                  value={formData.senha}
-                  onChange={handleChange}
-                  required
-               />
-            </div> */}
-            <div className="form-group">
-               <label htmlFor="celular">Celular:</label>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="celular">Celular:</label>
                <input
                   type="text"
                   id="celular"
                   name="celular"
+                  className='inputCadastro'
                   value={formData.celular}
                   onChange={handleChange}
                   required
                />
             </div>
-            <div className="form-group">
-               <label htmlFor="cep">CEP:</label>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="cep">CEP:</label>
                <input
                   type="text"
                   id="cep"
+                  className='inputCadastro'
                   name="cep"
                   value={formData.cep}
                   onChange={handleChange}
                   required
                />
             </div>
-            <div className="form-group">
-               <label htmlFor="dataNascimento">Data de Nascimento:</label>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="dataNascimento">Data de Nascimento:</label>
                <input
                   type="text"
                   id="dataNascimento"
@@ -136,55 +130,37 @@ export default function Cadastro() {
                   value={formData.dataNascimento}
                   onChange={handleChange}
                   required
+                  className='inputCadastro'
                />
             </div>
-            <div className="form-group">
-               <label htmlFor="email">Email:</label>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="email">Email:</label>
                <input
                   type="email"
                   id="email"
                   name="email"
+                  className='inputCadastro'
                   value={formData.email}
                   onChange={handleChange}
                   required
                />
             </div>
-            {/* <div className="form-group">
-               <label htmlFor="numero">Número:</label>
-               <input
-                  type="text"
-                  id="numero"
-                  name="numero"
-                  value={formData.numero}
-                  onChange={handleChange}
-                  required
-               />
-            </div> */}
-            <div className="form-group">
-               <label htmlFor="password">Senha:</label>
+            <div className="form-groupCadastro">
+               <label htmlFor="password" className='labelCadastro'>Senha:</label>
                <input
                   type="password"
                   id="password"
+                  className='inputCadastro'
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
                   required
                />
             </div>
-            {/* <div className="form-group">
-               <label htmlFor="roles">Roles:</label>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="telefone">Telefone:</label>
                <input
-                  type="text"
-                  id="roles"
-                  name="roles"
-                  value={formData.roles}
-                  onChange={handleChange}
-                  required
-               />
-            </div> */}
-            <div className="form-group">
-               <label htmlFor="telefone">Telefone:</label>
-               <input
+                  className='inputCadastro'
                   type="text"
                   id="telefone"
                   name="telefone"
@@ -193,7 +169,7 @@ export default function Cadastro() {
                   required
                />
             </div>
-            <button type="submit">Cadastrar</button>
+            <button className='buttonCadastro' type="submit">Cadastrar</button>
          </form>
       </div>
    );

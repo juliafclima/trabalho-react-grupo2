@@ -53,9 +53,9 @@ export default function Update() {
   return (
     <div>
       <Header />
-      <main>
+      <main className='divPrincipal'>
         <div className="card-post">
-          <h1>Atualizar postagem</h1>
+          <h1>Atualizar depoimento</h1>
           <hr />
           <div className="card-body-post">
             <form action="#" onSubmit={handleSubmit(addPost)}>

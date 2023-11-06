@@ -64,9 +64,9 @@ export default function Login() {
                 e.preventDefault(); 
                 authenticateUser(formData.email, formData.password); // Alterado aqui também
             }}>
-                <div className="form-group">
-                    <label htmlFor="email">Email:</label>
-                    <input
+                <div className="form-groupLogin">
+                    <label className='labelLogin' htmlFor="email">Email:</label>
+                    <input className='inputLogin'
                         type="text"
                         id="email"
                         name="email"
@@ -75,9 +75,9 @@ export default function Login() {
                         required
                     />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="password">Senha:</label>
-                    <input
+                <div className="form-groupLogin">
+                    <label className='labelLogin'  htmlFor="password">Senha:</label>
+                    <input className='inputLogin'
                         type="password"
                         id="password"
                         name="password"
@@ -86,7 +86,7 @@ export default function Login() {
                         required
                     />
                 </div>
-                <button type="submit">Login</button>
+                <button className='buttonLogin' type="submit">Login</button>
             </form>
         </div>
     );

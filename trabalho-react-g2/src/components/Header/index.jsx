@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './style.css'; // Importe o arquivo de estilo CSS
+import './style.css';
 import { Link } from 'react-router-dom';
+import Clock from '../../pages/Album/clock';
 
 const Header = () => {
    const [menuVisible, setMenuVisible] = useState(false);
@@ -11,21 +12,23 @@ const Header = () => {
 
    return (
       <header>
-         <nav className="navbar">
-            <div className="container">
-               <div className="nav-logo">REKUT</div>
-               <div className={`nav-links ${menuVisible ? 'active' : ''}`}>
+         <nav className="navbarHeader">
+            <div>
+               <div className="nav-logoHeader">REKUT</div>
+               <div className={`nav-linksHeader ${menuVisible ? 'active' : ''}`}>
                   <Link to='/'>Início</Link>
                   <Link to='/depoimentos'>Depoimentos</Link>
                   <Link to='/comunidade'>Comunidades</Link>
-                  <Link to='/album'>Album</Link> 
+                  <Link to='/album'>Album</Link>
                </div>
-               <div className="menu-icon" onClick={handleMenuClick}>
+               <div className="menu-iconHeader" onClick={handleMenuClick}>
                   ☰
                </div>
             </div>
          </nav>
+         <Clock />
       </header>
    );
-}
+};
+
 export default Header;
