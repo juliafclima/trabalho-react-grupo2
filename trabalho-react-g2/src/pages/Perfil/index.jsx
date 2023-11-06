@@ -2,6 +2,8 @@ import React from 'react';
 import './style.css';
 import imgPerfil from '../../assets/image.png';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
 
 const Perfil = () => {
 

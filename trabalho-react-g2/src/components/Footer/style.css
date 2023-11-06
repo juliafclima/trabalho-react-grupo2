@@ -1,0 +1,14 @@
+footer{
+    display: flex;
+    justify-content: center;
+    color: #000000;
+    align-items: center;
+    background-color: #759CCF;
+    margin-top: 3vh;
+    /* position: absolute; */
+    right: 0;
+    left: 0;
+    bottom: 0;
+    
+}
+

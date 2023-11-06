@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../components/Footer';
+
 
 export default function Cadastro() {
    
    let navigate = useNavigate();
 
    const [formData, setFormData] = useState({
+      celular: '',
+      cep: '',
+      cpf: '',
+      dataNascimento: '',
+      email: '',
       nome: '',
       nomeUsuario: '',
-      cpf: '',
-      endereco: '',
-      senha: '', // Adicionamos o campo de senha ao estado
+      numero: '1234',
+      password: '',
+      roles:[
+          'VENDEDOR'],
+      telefone: ''
+      
    });
-   const [cadastroConcluido, setCadastroConcluido] = useState(false); // Estado para controlar a exibição da mensagem
+   const [cadastroConcluido, setCadastroConcluido] = useState(false);
    const handleChange = (e) => {
       const { name, value } = e.target;
       setFormData({
@@ -25,8 +35,10 @@ export default function Cadastro() {
    const handleSubmit = (e) => {
       e.preventDefault();
 
-      const url = 'https://6513726b8e505cebc2e9db94.mockapi.io/clientes';
+      const url = `http://localhost:8080/api/usuario/registro?email=${formData.email}`;
 
+      console.log('teste')
+      console.log(JSON.stringify(formData))
       fetch(url, {
          method: 'POST',
          headers: {
@@ -48,67 +60,126 @@ export default function Cadastro() {
    };
 
    return (
-      <div className="container">
+      <>
+      <div className="containerCadastro">
          <h1>Cadastro de Cliente</h1>
-         {cadastroConcluido && <p>Cadastro concluído! Obrigado por se cadastrar.</p>} {/* Mensagem de cadastro concluído */}
+         {cadastroConcluido && <p>Cadastro concluído! Obrigado por se cadastrar.</p>}
          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-               <label htmlFor="nome">Nome:</label>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="nome">Nome:</label>
                <input
                   type="text"
                   id="nome"
+                  className='inputCadastro'
                   name="nome"
                   value={formData.nome}
                   onChange={handleChange}
                   required
                />
             </div>
-            <div className="form-group">
-               <label htmlFor="nomeUsuario">Nome de Usuário:</label>
+            <div className="form-groupCadastro">
+               <label htmlFor="nomeUsuario" className='labelCadastro'>Nome de Usuário:</label>
                <input
                   type="text"
                   id="nomeUsuario"
+                  className='inputCadastro'
                   name="nomeUsuario"
                   value={formData.nomeUsuario}
                   onChange={handleChange}
                   required
                />
             </div>
-            <div className="form-group">
-               <label htmlFor="cpf">CPF:</label>
+            <div className="form-groupCadastro">
+               <label htmlFor="cpf" className='labelCadastro'>CPF:</label>
                <input
                   type="text"
                   id="cpf"
                   name="cpf"
+                  className='inputCadastro'
                   value={formData.cpf}
                   onChange={handleChange}
                   required
                />
             </div>
-            <div className="form-group">
-               <label htmlFor="endereco">Endereço:</label>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="celular">Celular:</label>
                <input
                   type="text"
-                  id="endereco"
-                  name="endereco"
-                  value={formData.endereco}
+                  id="celular"
+                  name="celular"
+                  className='inputCadastro'
+                  value={formData.celular}
                   onChange={handleChange}
                   required
                />
             </div>
-            <div className="form-group">
-               <label htmlFor="senha">Senha:</label>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="cep">CEP:</label>
+               <input
+                  type="text"
+                  id="cep"
+                  className='inputCadastro'
+                  name="cep"
+                  value={formData.cep}
+                  onChange={handleChange}
+                  required
+               />
+            </div>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="dataNascimento">Data de Nascimento:</label>
+               <input
+                  type="text"
+                  id="dataNascimento"
+                  name="dataNascimento"
+                  value={formData.dataNascimento}
+                  onChange={handleChange}
+                  required
+                  className='inputCadastro'
+               />
+            </div>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="email">Email:</label>
+               <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className='inputCadastro'
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+               />
+            </div>
+            <div className="form-groupCadastro">
+               <label htmlFor="password" className='labelCadastro'>Senha:</label>
                <input
                   type="password"
-                  id="senha"
-                  name="senha"
-                  value={formData.senha}
+                  id="password"
+                  className='inputCadastro'
+                  name="password"
+                  value={formData.password}
                   onChange={handleChange}
                   required
                />
             </div>
-            <button type="submit">Cadastrar</button>
+            <div className="form-groupCadastro">
+               <label className='labelCadastro' htmlFor="telefone">Telefone:</label>
+               <input
+                  className='inputCadastro'
+                  type="text"
+                  id="telefone"
+                  name="telefone"
+                  value={formData.telefone}
+                  onChange={handleChange}
+                  required
+               />
+            </div>
+            <button className='buttonCadastro' type="submit">Cadastrar</button>
          </form>
+        
+         
       </div>
+      <Footer />
+      </>
+
    );
 }

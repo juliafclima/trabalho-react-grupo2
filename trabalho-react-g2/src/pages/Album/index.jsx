@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Clock from './clock';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
 
 export default function ImageCarousel() {
   const [images, setImages] = useState([]);
@@ -12,8 +13,8 @@ export default function ImageCarousel() {
   const handleImageUpload = (e) => {
     const newImages = [...images];
 
-    for (let i = 0; i < e.target.files.length; i++) {
-      const file = e.target.files[i];
+    for (const element of e.target.files) {
+      const file = element
       const imageUrl = URL.createObjectURL(file);
       newImages.push(imageUrl);
     }
@@ -30,12 +31,10 @@ export default function ImageCarousel() {
   };
 
   return (
-    <div>
-      <Header />
-      <Clock />
-      <h2>Álbum de Imagens</h2>
+    <div className='album'>
 
-      <input
+      <Header />
+      <input className='inputAlbum'
         type="file"
         accept="image/*"
         multiple
@@ -44,7 +43,7 @@ export default function ImageCarousel() {
       />
 
       {images.length > 0 && (
-        <Carousel
+        <Carousel 
           showThumbs={false}
           infiniteLoop={true}
           useKeyboardArrows={true}
@@ -54,7 +53,7 @@ export default function ImageCarousel() {
           centerMode={true}
           centerSlidePercentage={60}
           dynamicHeight={true}
-          width="80%"
+          width="40%"
           stopOnHover={true}
         >
           {images.map((image, index) => (
@@ -62,16 +61,16 @@ export default function ImageCarousel() {
               <img
                 src={image}
                 alt={`Imagem ${index}`}
-                className="carousel-image"
+                className="carousel-imageAlbum"
               />
-              <button className="like-button" onClick={() => handleLikeClick(index)}>
+              <button className="like-buttonAlbum" onClick={() => handleLikeClick(index)}>
                 Like
               </button>
-              <p>Likes: {likes[index]}</p>
             </div>
           ))}
         </Carousel>
       )}
+      <Footer />
     </div>
   );
 }

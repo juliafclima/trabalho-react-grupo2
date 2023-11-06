@@ -1,51 +1,111 @@
 .comunidade {
-    background-color: #a7c1e3;
-   box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-    height: 100vh;
-    width: 100vw;
-  }
-  
-  .card {
-  
-    border-radius: 8px;
-    margin: 30px;
-    border: 1px solid #ed2592;
-    background-color: #759ccf;
-  
-    display: flex;
+  box-sizing: border-box;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardComunidade {
+  border-radius: 8px;
+  margin: 20px 0;
+  border: 1px solid #ed2592;
+  background-color: #a7c1e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 200vw;
+  max-width: 800px;
+  text-align: left;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.card-imgComunidade {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px;
+  max-width: 100%;
+}
+
+.subCardComunidade {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  width: 100px;
+  max-width: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+  padding-left: 3px;
+}
+
+.textoComunidade {
+  height: 391px;
+  max-width: 900px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding-left: 15px;
+  padding-right: 200px;
+  padding-top: 10px;
+  margin: 10px;
+}
+
+.textoComunidade h1 {
+  font-size: 30px;
+  font-weight: 500px;
+  padding-bottom: 1px;
+  padding-top: 15px;
+}
+
+.textoComunidade p {
+  font-size: 18px;
+}
+
+.textoComunidade .piquininim {
+  font-size: 14px;
+  padding-bottom: 40px;
+}
+
+.textoComunidade .piquininim:hover {
+  color: #ed2592;
+}
+
+span {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.cardLinkComunidade {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cardLinkComunidade:hover {
+  color: #ed2592;
+}
+
+@media (min-width: 768px) {
+  .cardComunidade {
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-  
-    
   }
-  
-  .card img {
+
+  .card-imgComunidade {
     width: 100px;
     height: 100px;
-    border-radius: 8px;
+  }
+
+  .subCardComunidade {
+    width: 13vw;
+    max-width: 13vw;
+    margin: 5px;
     padding: 10px;
-    
-  
+    margin-left: 5px;
   }
-  
-  .card .texto {
-    width: 10px;
-    margin-left: 0px;
-    padding-left: 0px;
-    
-    
-  }
-
-
-.subCard {
-
-    background-color: #a7c1e3;
-    border-radius: 8px;
-    margin: 15px;
-
-
 }

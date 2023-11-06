@@ -1,6 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function Effect() {
   const [dados, setDados] = useState([]);
@@ -26,7 +24,6 @@ export default function Effect() {
   return (
     <div>
       <h2>Dados do Cliente</h2>
-      {/* renderização condicional */}
       {carregando ? (
         <p>Carregando</p>
       ) : (
