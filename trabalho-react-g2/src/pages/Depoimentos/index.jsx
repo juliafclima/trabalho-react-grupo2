@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import GeradorAleatorio from './GeradorAleatorio';
 import Footer from '../../components/Footer';
-
+import WeatherApp from './clima';
 
 export default function Depoimentos() {
   const [posts, setPosts] = useState([]);
@@ -46,10 +46,11 @@ export default function Depoimentos() {
       return `${seconds} ${seconds === 1 ? 'segundo' : 'segundos'}`;
     }
   }
-
+  
   return (
     <>
       <Header />
+    <WeatherApp />
 
       <Link to='/posts'>
         <div className="containerNovoPosts">
