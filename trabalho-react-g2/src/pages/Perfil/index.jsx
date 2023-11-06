@@ -12,7 +12,7 @@ const Perfil = () => {
             <div class="principal">
                 <div class="fundo-azul">
                     <div class="pai">
-
+                        
 
                         <div class="coluas-esquerda"> {/*div's da esquerda */}
                             <div class="div-orientacao-esquerda">
@@ -155,7 +155,7 @@ const Perfil = () => {
                                         <div class="livro1">Diário de um Banana</div>
                                     </div>
                                 </div>
-
+                                
                                 {/* ########################################################################################################################################################################################################################################## */}
 
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/Footer';
-
+import HeaderLogin from '../../components/HeaderLogin';
 
 export default function Cadastro() {
    
@@ -61,6 +61,7 @@ export default function Cadastro() {
 
    return (
       <>
+         <HeaderLogin />
       <div className="containerCadastro">
          <h1>Cadastro de Cliente</h1>
          {cadastroConcluido && <p>Cadastro concluído! Obrigado por se cadastrar.</p>}
