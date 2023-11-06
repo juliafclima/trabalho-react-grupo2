@@ -22,7 +22,7 @@ export default function Login() {
 
     const authenticateUser = async (email, password) => {
         try {
-            const response = await fetch(`http://localhost:8080/api/usuario/logar?email=${formData.email}`, {
+            const response = await fetch(`http://localhost:8080/api/usuario/logar`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -32,19 +32,17 @@ export default function Login() {
                     password: password,
                 }),
             });
+
+            console.log(response)
     
             if (response.ok) {
                 const userData = await response.json();
     
-                if (userData.length > 0) {
-                    const user = userData[0];
-                    if (user.password === password) { 
-                        setToken(user.id);
-                        alert('Login bem-sucedido!');
-                        navigateTo('/');
-                    } else {
-                        alert('Nome de Usuário ou Senha incorreta. Tente novamente.');
-                    }
+                if (userData.token != null) {
+                    localStorage.setItem('token', userData.token)
+                    alert('Login bem-sucedido!');
+                    navigateTo('/');
+                    
                 } else {
                     alert('Email não encontrado. Verifique as credenciais.');
                 }
