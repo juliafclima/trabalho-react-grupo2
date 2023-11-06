@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
 
-      {/* tag 7.0.0 */}
+      {/* tag 7.1.0 */}
 
       <BrowserRouter>
         <AppRouter />
