@@ -14,7 +14,7 @@ export default function Depoimentos() {
     axios
       .get("https://6542dfe001b5e279de1fabce.mockapi.io/posts")
       .then((response) => {
-        setPosts(response.data);
+        setPosts(response.data.reverse());
         console.log(response.data);
       })
       .catch(() => {
@@ -25,6 +25,26 @@ export default function Depoimentos() {
   function deletePost(id) {
     axios.delete(`https://6542dfe001b5e279de1fabce.mockapi.io/posts/${id}`);
     setPosts(posts.filter(post => post.id !== id));
+  }
+
+  function calculateElapsedTime(date) {
+    const postDate = new Date(date);
+    const currentDate = new Date();
+    const elapsedTimeInMilliseconds = currentDate - postDate;
+    const seconds = Math.floor(elapsedTimeInMilliseconds / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+
+    if (days > 0) {
+      return `${days} ${days === 1 ? 'dia' : 'dias'}`;
+    } else if (hours > 0) {
+      return `${hours} ${hours === 1 ? 'hora' : 'horas'}`;
+    } else if (minutes > 0) {
+      return `${minutes} ${minutes === 1 ? 'minuto' : 'minutos'}`;
+    } else {
+      return `${seconds} ${seconds === 1 ? 'segundo' : 'segundos'}`;
+    }
   }
 
   return (
@@ -51,14 +71,15 @@ export default function Depoimentos() {
                       <div className="btnsDepoimentos">
                         <div className="btn-editDepoimentos">
                           <Link to={`/update/${post.id}`}>
-                            <button className='buttonDepoimentos'>Editar</button>
+                            <button className='buttonDepoimentos'>✏️</button>
                           </Link>
                         </div>
                         <div className="btn-deleteDepoimentos">
-                          <button className='buttonDepoimentos' onClick={() => deletePost(post.id)}>Apagar</button>
+                          <button className='buttonDepoimentos' onClick={() => deletePost(post.id)}>🗑️</button>
                         </div>
                       </div>
                     </div>
+                    <p>Postado {calculateElapsedTime(post.dataPublicacao)} atrás</p>
                   </header>
                 </div>
               );

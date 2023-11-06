@@ -1,11 +1,11 @@
 .clock {
   font-size: 20px;
-  color: red;
+  color: #ED2592;
   padding: 10px 20px;
-  border-radius: 5px;
   text-align: right;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: font-size 0.3s ease, padding 0.3s ease;
+  background-color: white;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
