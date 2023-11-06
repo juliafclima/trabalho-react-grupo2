@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../../components/Header';
 import "./style.css"
+import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
 
 export default function () {
   return (
@@ -13,6 +15,7 @@ export default function () {
         <p className='error-message'>Tente novamente, pois erro não é o fim da linha! ;)</p>
         <Link className="redirect-button" to='/'>Voltar para a Página Principal</Link>
       </div>
+      <Footer />
     </div>
   );
 };
