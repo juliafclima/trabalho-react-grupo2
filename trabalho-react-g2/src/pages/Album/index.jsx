@@ -30,6 +30,7 @@ export default function ImageCarousel() {
 
   return (
     <div className='album'>
+
       <Header />
       <input className='inputAlbum'
         type="file"
@@ -40,7 +41,7 @@ export default function ImageCarousel() {
       />
 
       {images.length > 0 && (
-        <Carousel
+        <Carousel 
           showThumbs={false}
           infiniteLoop={true}
           useKeyboardArrows={true}
@@ -50,7 +51,7 @@ export default function ImageCarousel() {
           centerMode={true}
           centerSlidePercentage={60}
           dynamicHeight={true}
-          width="80%"
+          width="40%"
           stopOnHover={true}
         >
           {images.map((image, index) => (
