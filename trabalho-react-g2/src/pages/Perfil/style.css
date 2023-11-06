@@ -7,6 +7,7 @@
 }
 
 .fundo-azul {
+    margin-top: -200px;
     border-radius: 20px;
     background-color: #cce0f4;
     align-self: stretch;
@@ -70,8 +71,9 @@
     color: #ed2590;
     align-self: center;
     white-space: nowrap;
+    margin-left: 10px;
     margin-top: -70px;
-    font: 400 140px Hello Angel, sans-serif;
+    font: 400 90px Hello Angel, sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -144,7 +146,7 @@
     height: 63px;
     flex-direction: column;
     flex-grow: 1;
-    flex-basis: auto;
+    flex-basis:0%;
 }
 
 .nome-bio {
@@ -152,7 +154,8 @@
     align-self: center;
     flex-grow: 1;
     flex-basis: auto;
-    margin: auto 0;
+    margin-right: 130px;
+    
     font: 400 30px Adamina, sans-serif;
 }
 
@@ -1005,6 +1008,7 @@
 }
 
 .div-56 {
+    margin-right: 280px;
     align-self: stretch;
     color: #000;
     font: 400 53px Arial, sans-serif;
@@ -1480,6 +1484,7 @@
 }
 
 .div-75 {
+    transform: translate(-9vh, -3vh);
     color: #000;
     align-self: end;
     font: 400 30px Arial, sans-serif;
@@ -1535,6 +1540,8 @@
     flex-direction: column;
 }
 
+
+
 @media (max-width: 991px) {
     .div-77 {
         margin-top: 40px;
@@ -1542,6 +1549,7 @@
 }
 
 .div-78 {
+    transform: translate(10vh,-3vh);
     color: #ed2590;
     align-self: end;
     margin-right: 18px;

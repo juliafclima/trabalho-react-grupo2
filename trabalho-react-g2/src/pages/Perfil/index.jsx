@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 /* import imgPerfil from '../../assets/image.png'; */
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 const Perfil = () => {
 
@@ -16,7 +17,10 @@ const Perfil = () => {
                         <div class="coluas-esquerda"> {/*div's da esquerda */}
                             <div class="div-orientacao-esquerda">
 
-                                <div class="logo">REKUT</div> {/*logo */}
+                                <a href="https://www.rekut.com" style={{ textDecoration: 'none' }}>
+                                    <div className="logo">REKUT</div>{/*logo */}
+                                </a>
+                                
 
                                 <div class="bio">{/*bio */}
                                     <div class="borda-rosa">
@@ -28,7 +32,8 @@ const Perfil = () => {
                                     </div>
                                     <div class="div-nome-perfil">
                                         <div class="barra-rosa"></div>
-                                        <div class="nome-bio">Lucas José Gonçalves</div>
+                                        <a href="https://www.rekut.com" style={{ textDecoration: 'none' }}>
+                                        <div class="nome-bio">Lucas José Gonçalves</div></a>
                                     </div>
                                     <div class="letrinhas-cinzas">
                                         Masculino Casado
@@ -42,7 +47,9 @@ const Perfil = () => {
                                             srcset="src\assets\img\perfil\lapis.png"
                                             class="lapis"
                                         />
+                                        <a href="https://www.rekut.com" style={{ textDecoration: 'none' }}>
                                         <div class="editar-perfil">Editar Perfil</div>
+                                    </a>
                                     </div>
                                     <div class="div-do-recado">
                                         <img
@@ -50,7 +57,9 @@ const Perfil = () => {
                                             srcset="src\assets\img\perfil\correspondencia.png"
                                             class="recado"
                                         />
+                                        <a href="https://www.rekut.com" style={{ textDecoration: 'none' }}>
                                         <div class="recados">Recados</div>
+                                        </a>
                                     </div>
                                     <div class="div-da-galeria">
                                         <img
@@ -58,7 +67,9 @@ const Perfil = () => {
                                             srcset="src\assets\img\perfil\galeria-de-imagens.png"
                                             class="galery"
                                         />
+                                        <a href="https://www.rekut.com" style={{ textDecoration: 'none' }}>
                                         <div class="galeria">Galeria</div>
+                                        </a>
                                     </div>
                                     <div class="div-depoimento">
                                         <img
@@ -66,7 +77,9 @@ const Perfil = () => {
                                             srcset="src\assets\img\perfil\depoimentos.png"
                                             class="dep"
                                         />
+                                        <a href="https://www.rekut.com" style={{ textDecoration: 'none' }}>
                                         <div class="galeria">depomentos</div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +179,9 @@ const Perfil = () => {
                                             </div>
                                             <div class="column-4">
                                                 <div class="div-55">
+                                                <a href="https://www.rekut.com" style={{ textDecoration: 'none' }}>
                                                     <div class="div-56">Carluxo</div>
+                                                    </a>
                                                     <div class="div-57">TENDEU TENDEU!!</div>
                                                     <div class="div-58">03/11/2008 - 18:13</div>
                                                 </div>
@@ -204,7 +219,9 @@ const Perfil = () => {
                                             </div>
                                             <div class="column-8">
                                                 <div class="div-65">
+                                                <a href="https://www.rekut.com" style={{ textDecoration: 'none' }}>
                                                     <div class="div-66">ver todas</div>
+                                                    </a>
                                                     <img
                                                         loading="lazy"
                                                         srcset="src\assets\img\perfil\amigo4.jpeg"
@@ -274,7 +291,9 @@ const Perfil = () => {
                                             </div>
                                             <div class="column-14">
                                                 <div class="div-77">
+                                                <a href="https://www.rekut.com" style={{ textDecoration: 'none' }}>
                                                     <div class="div-78">ver todas</div>
+                                                    </a>
                                                     <img
                                                         loading="lazy"
                                                         srcset="src\assets\img\perfil\comun2.png"
@@ -341,6 +360,7 @@ const Perfil = () => {
                     </div>
                 </div >
             </div >
+            <Footer />
         </>
     );
 };
