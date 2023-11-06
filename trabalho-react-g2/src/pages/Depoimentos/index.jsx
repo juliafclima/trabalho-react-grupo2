@@ -25,6 +25,26 @@ export default function Depoimentos() {
     setPosts(posts.filter(post => post.id !== id));
   }
 
+  function calculateElapsedTime(date) {
+    const postDate = new Date(date);
+    const currentDate = new Date();
+    const elapsedTimeInMilliseconds = currentDate - postDate;
+    const seconds = Math.floor(elapsedTimeInMilliseconds / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+
+    if (days > 0) {
+      return `${days} ${days === 1 ? 'dia' : 'dias'}`;
+    } else if (hours > 0) {
+      return `${hours} ${hours === 1 ? 'hora' : 'horas'}`;
+    } else if (minutes > 0) {
+      return `${minutes} ${minutes === 1 ? 'minuto' : 'minutos'}`;
+    } else {
+      return `${seconds} ${seconds === 1 ? 'segundo' : 'segundos'}`;
+    }
+  }
+
   return (
     <>
       <Header />
@@ -57,6 +77,7 @@ export default function Depoimentos() {
                         </div>
                       </div>
                     </div>
+                    <p>Postado {calculateElapsedTime(post.dataPublicacao)} atrás</p>
                   </header>
                 </div>
               );
