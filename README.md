@@ -1,11 +1,27 @@
 # Grupo 2/Turma 13 - Serratec
 
 ## Descrição do Projeto
-<p>Descrição do projeto...</p>
+<p>O projeto consiste em uma releitura do nosso querido e vintage ORkUT.</p>
 
 ## Instalação e execução do projeto
 <p>-Git clone: git@github.com:juliafclima/trabalho-react-grupo2.git</p>
-<p>Git Pages: Link...</p>
+
+Git clone API: https://github.com/CarlosAlbertoMPZ/Trabalho-API-Grupo2.git
+(Para usar o sistema de logim e cadastro é necessário rodas a API localmente)
+
+## Trabalho extra (20 pontos)
+
+Julia - Nav Bar responsiva.
+
+Carlos - Relógio e data em tempo real e Carrossel.
+
+Roger - Clima em tempo real.
+
+Hevelise - Animação ao clicar em "participar" na página "comunidade".
+
+Lucas José - Responsividade da Home. 
+
+Lucas Seljan - Carrossel.
 
 ## Funcionalidades do projeto
 
