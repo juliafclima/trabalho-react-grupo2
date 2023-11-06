@@ -12,7 +12,7 @@ export default function Depoimentos() {
     axios
       .get("https://6542dfe001b5e279de1fabce.mockapi.io/posts")
       .then((response) => {
-        setPosts(response.data);
+        setPosts(response.data.reverse());
         console.log(response.data);
       })
       .catch(() => {
