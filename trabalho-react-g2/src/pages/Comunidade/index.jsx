@@ -15,12 +15,10 @@ import lupa from "../../assets/img/comunidade/lupa.jpg";
 import violao from "../../assets/img/comunidade/violao.jpg";
 
 const comunidades = [
-
-
-
   {
     imgSrc: carlucho,
-    titulo: "Eu amo morangos!",
+    titulo: "Nós amamos morangos!",
+    piquininim: "início > comunidades > pessoas",
     descricao: "Quem discordar está errado.",
     idioma: "Português",
     categoria: "Fruta",
@@ -34,6 +32,7 @@ const comunidades = [
   {
     imgSrc: lupa,
     titulo: "Professor, aumenta a letra!?",
+    piquininim: "início > comunidades > pessoas",
     descricao: "E nem é meme.",
     idioma: "Português",
     categoria: "Dificuldades",
@@ -47,6 +46,7 @@ const comunidades = [
   {
     imgSrc: violao,
     titulo: "Eu toco mesmo, e daí!?",
+    piquininim: "início > comunidades > pessoas",
     descricao: "Violões, tô dentro.",
     idioma: "Português",
     categoria: "Musissistas",
@@ -55,11 +55,12 @@ const comunidades = [
     membro: 45698,
     dono: "Julinhazinhainha",
     data: "08/07/2010",
-  }, 
-  
+  },
+
   {
     imgSrc: borracha,
     titulo: "Eu nunca terminei uma borracha.",
+    piquininim: "início > comunidades > pessoas",
 
     descricao: "Borrachas não merecem acabar!",
     idioma: "Português",
@@ -73,7 +74,8 @@ const comunidades = [
 
   {
     imgSrc: garfield,
-    titulo: "Eu odeio acordar cedo.",
+    titulo: "Odiamos acordar cedo.",
+    piquininim: "início > comunidades > pessoas",
     descricao: "Comunidade auto explicativa.",
     idioma: "Português",
     categoria: "Sono",
@@ -87,6 +89,7 @@ const comunidades = [
   {
     imgSrc: thony,
     titulo: "Eu colho flores e THONY RAMOS.",
+    piquininim: "início > comunidades > pessoas",
     descricao: "E carlucho rega flores.",
     idioma: "Português",
     categoria: "Pêlos",
@@ -100,6 +103,7 @@ const comunidades = [
   {
     imgSrc: sorvete,
     titulo: "Queria sorvete mas era feijão.",
+    piquininim: "início > comunidades > pessoas",
     descricao: "Quem nunca sofreu essa decepção na vida!?",
     idioma: "Português",
     categoria: "Ilusão",
@@ -112,7 +116,8 @@ const comunidades = [
 
   {
     imgSrc: xororo,
-    titulo: "Não sei individualizar duplas.",
+    titulo: "Não individualizo duplas.",
+    piquininim: "início > comunidades > pessoas",
     descricao: "Pra mim eles são uma pessoa só e ponto.",
     idioma: "Português",
     categoria: "Falta de personalidade",
@@ -126,6 +131,7 @@ const comunidades = [
   {
     imgSrc: shampoo,
     titulo: "Eu leio o shampoo no banho.",
+    piquininim: "início > comunidades > pessoas",
     descricao: "É mentira pois eu não enxergo.",
     idioma: "Português",
     categoria: "Banho",
@@ -139,6 +145,7 @@ const comunidades = [
   {
     imgSrc: comun7,
     titulo: "Antes uma pedra no caminho...",
+    piquininim: "início > comunidades > pessoas",
     descricao: "Do que duas nos rins!",
     idioma: "Português",
     categoria: "Dor",
@@ -152,6 +159,7 @@ const comunidades = [
   {
     imgSrc: comun8,
     titulo: "Eu nunca morri na minha vida.",
+    piquininim: "início > comunidades > pessoas",
     descricao: "E que continue assim...",
     idioma: "Português",
     categoria: "Sorte",
@@ -161,8 +169,6 @@ const comunidades = [
     dono: "Lucas",
     data: "12/05/2008",
   },
-
-
 ];
 
 const Comunidade = () => {
