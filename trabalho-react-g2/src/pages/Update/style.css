@@ -1,4 +1,3 @@
-/* Estilos para a div principal */
 .divPrincipal {
    background-color: #A7C1E3;
    padding: 20px;
@@ -9,7 +8,6 @@
    min-height: 100vh;
 }
 
-/* Estilos para o header */
 .header {
    background-color: #ED2592;
    color: #fff;
@@ -17,12 +15,10 @@
    width: 100%;
 }
 
-/* Estilos para o h1 */
 .card-post h1 {
    color: #ED2592;
 }
 
-/* Estilos para os campos e rótulos */
 .fields {
    margin-bottom: 20px;
    width: 100%;
@@ -48,14 +44,12 @@
    box-sizing: border-box;
 }
 
-/* Estilos para a mensagem de erro */
 .error-message {
    color: red;
    margin-top: 5px;
    width: 100%;
 }
 
-/* Estilos para o botão de enviar */
 .btn-post button {
    background-color: #ED2592;
    color: #fff;
@@ -73,7 +67,6 @@
    background-color: #759CCF;
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
 
    .fields input[type="text"],
