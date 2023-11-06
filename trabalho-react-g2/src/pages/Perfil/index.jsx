@@ -1,9 +1,7 @@
 import React from 'react';
 import './style.css';
-import imgPerfil from '../../assets/image.png';
+/* import imgPerfil from '../../assets/image.png'; */
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-
 
 const Perfil = () => {
 
@@ -24,7 +22,7 @@ const Perfil = () => {
                                     <div class="borda-rosa">
                                         <img
                                             loading="lazy"
-                                            srcset="src\assets\image.png"
+                                            srcset="src\assets\img\perfil\image.png"
                                             class="img-perfil"
                                         />
                                     </div>
@@ -41,7 +39,7 @@ const Perfil = () => {
                                     <div class="div-do-editar-perfil">
                                         <img
                                             loading="lazy"
-                                            srcset="src\assets\lapis.png"
+                                            srcset="src\assets\img\perfil\lapis.png"
                                             class="lapis"
                                         />
                                         <div class="editar-perfil">Editar Perfil</div>
@@ -49,7 +47,7 @@ const Perfil = () => {
                                     <div class="div-do-recado">
                                         <img
                                             loading="lazy"
-                                            srcset="src\assets\correspondencia.png"
+                                            srcset="src\assets\img\perfil\correspondencia.png"
                                             class="recado"
                                         />
                                         <div class="recados">Recados</div>
@@ -57,7 +55,7 @@ const Perfil = () => {
                                     <div class="div-da-galeria">
                                         <img
                                             loading="lazy"
-                                            srcset="src\assets\galeria-de-imagens.png"
+                                            srcset="src\assets\img\perfil\galeria-de-imagens.png"
                                             class="galery"
                                         />
                                         <div class="galeria">Galeria</div>
@@ -65,7 +63,7 @@ const Perfil = () => {
                                     <div class="div-depoimento">
                                         <img
                                             loading="lazy"
-                                            srcset="src\assets\depoimentos.png"
+                                            srcset="src\assets\img\perfil\depoimentos.png"
                                             class="dep"
                                         />
                                         <div class="galeria">depomentos</div>
@@ -94,22 +92,22 @@ const Perfil = () => {
                                     <div class="div-icones">
                                         <img
                                             loading="lazy"
-                                            srcset="src\assets\estrela.png"
+                                            srcset="src\assets\img\perfil\estrela.png"
                                             class="estrela"
                                         />
                                         <img
                                             loading="lazy"
-                                            srcset="src\assets\emoji2.png"
+                                            srcset="src\assets\img\perfil\emoji2.png"
                                             class="smile"
                                         />
                                         <img
                                             loading="lazy"
-                                            srcset="src\assets\like.png"
+                                            srcset="src\assets\img\perfil\like.png"
                                             class="like"
                                         />
                                         <img
                                             loading="lazy"
-                                            srcset="src\assets\coração.png"
+                                            srcset="src\assets\img\perfil\coração.png"
                                             class="love"
                                         />
                                     </div>
@@ -153,7 +151,7 @@ const Perfil = () => {
                                         <div class="div-52">Depoimentos</div>
                                         <img
                                             loading="lazy"
-                                            srcset="src\assets\seta.png"
+                                            srcset="src\assets\img\perfil\seta.png"
                                             class="img-11"
                                         />
                                     </div>
@@ -162,7 +160,7 @@ const Perfil = () => {
                                             <div class="column-3">
                                                 <img
                                                     loading="lazy"
-                                                    srcset="src\assets\amigo3.jpeg"
+                                                    srcset="src\assets\img\perfil\amigo3.jpeg"
                                                     class="img-12"
                                                 />
                                             </div>
@@ -176,7 +174,7 @@ const Perfil = () => {
                                             <div class="column-5">
                                                 <img
                                                     loading="lazy"
-                                                    srcset="src\assets\lixeira.png"
+                                                    srcset="src\assets\img\perfil\lixeira.png"
                                                     class="img-13"
                                                 />
                                             </div>
@@ -199,7 +197,7 @@ const Perfil = () => {
                                                     <div class="palavra-amigo">Amigos</div>
                                                     <img
                                                         loading="lazy"
-                                                        srcset="src\assets\amigo3.jpeg"
+                                                        srcset="src\assets\img\perfil\amigo3.jpeg"
                                                         class="img-14"
                                                     />
                                                 </div>
@@ -209,7 +207,7 @@ const Perfil = () => {
                                                     <div class="div-66">ver todas</div>
                                                     <img
                                                         loading="lazy"
-                                                        srcset="src\assets\amigo4.jpeg"
+                                                        srcset="src\assets\img\perfil\amigo4.jpeg"
                                                         class="img-15"
                                                     />
                                                 </div>
@@ -221,14 +219,14 @@ const Perfil = () => {
                                             <div class="column-9">
                                                 <img
                                                     loading="lazy"
-                                                    srcset="src\assets\amigo3.jpeg"
+                                                    srcset="src\assets\img\perfil\amigo3.jpeg"
                                                     class="img-16"
                                                 />
                                             </div>
                                             <div class="column-10">
                                                 <img
                                                     loading="lazy"
-                                                    srcset="src\assets\amigo4.jpeg"
+                                                    srcset="src\assets\img\perfil\amigo4.jpeg"
                                                     class="img-17"
                                                 />
                                             </div>
@@ -239,14 +237,14 @@ const Perfil = () => {
                                             <div class="column-11">
                                                 <img
                                                     loading="lazy"
-                                                    srcset="src\assets\amigo3.jpeg"
+                                                    srcset="src\assets\img\perfil\amigo3.jpeg"
                                                     class="img-18"
                                                 />
                                             </div>
                                             <div class="column-12">
                                                 <img
                                                     loading="lazy"
-                                                    srcset="src\assets\amigo4.jpeg"
+                                                    srcset="src\assets\img\perfil\amigo4.jpeg"
                                                     class="img-19"
                                                 />
                                             </div>
@@ -264,7 +262,7 @@ const Perfil = () => {
                                                     <div class="div-75">Comunidades</div>
                                                     <img
                                                         loading="lazy"
-                                                        srcset="src\assets\comun1.png"
+                                                        srcset="src\assets\img\perfil\comun1.png"
                                                         class="img-20"
                                                     />
                                                     <div class="div-76">
@@ -279,7 +277,7 @@ const Perfil = () => {
                                                     <div class="div-78">ver todas</div>
                                                     <img
                                                         loading="lazy"
-                                                        srcset="src\assets\comun2.png"
+                                                        srcset="src\assets\img\perfil\comun2.png"
                                                         class="img-21"
                                                     />
                                                     <div class="div-79">Eu odeio acordar cedo</div>
@@ -293,7 +291,7 @@ const Perfil = () => {
                                                 <div class="div-82">
                                                     <img
                                                         loading="lazy"
-                                                        srcset="src\assets\comun3.png"
+                                                        srcset="src\assets\img\perfil\comun3.png"
                                                         class="img-22"
                                                     />
                                                     <div class="div-83">Eu colho flores e TONY RAMOS!</div>
@@ -303,7 +301,7 @@ const Perfil = () => {
                                                 <div class="div-84">
                                                     <img
                                                         loading="lazy"
-                                                        srcset="src\assets\comun4.png"
+                                                        srcset="src\assets\img\perfil\comun4.png"
                                                         class="img-23"
                                                     />
                                                     <div class="div-85">Queria sorvete, mas era feijão</div>
@@ -317,7 +315,7 @@ const Perfil = () => {
                                                 <div class="div-88">
                                                     <img
                                                         loading="lazy"
-                                                        srcset="src\assets\comun5.png"
+                                                        srcset="src\assets\img\perfil\comun5.png"
                                                         class="img-24"
                                                     />
                                                     <div class="div-89">Não sei individualizar duplas</div>
@@ -327,7 +325,7 @@ const Perfil = () => {
                                                 <div class="div-90">
                                                     <img
                                                         loading="lazy"
-                                                        srcset="src\assets\comun6.png"
+                                                        srcset="src\assets\img\perfil\comun6.png"
                                                         class="img-25"
                                                     />
                                                     <div class="div-91">Eu leio o shampoo no banho</div>
