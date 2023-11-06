@@ -1,36 +1,30 @@
 .principal {
-    justify-content: center;
-    align-items: center;
     background-color: #fff;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .fundo-azul {
-    border-radius: 20px;
-    background-color: #cce0f4;
-    align-self: stretch;
-    width: 100%;
-    padding: 48px 29px 0 73px;
     background: linear-gradient(to right, #DCE8F4, #98bdf5);
-}
-
-@media (max-width: 991px) {
-    .fundo-azul {
-        max-width: 100%;
-        padding: 0 20px;
-    }
+    border-radius: 20px;
+    width: 100%;
+    padding: 6% 3.5% 0 10%;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .pai {
-    gap: 20px;
     display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
 }
 
 @media (max-width: 991px) {
     .pai {
         flex-direction: column;
-        align-items: stretch;
         gap: 0px;
     }
 }
@@ -43,6 +37,7 @@
     line-height: normal;
     width: 20%;
     margin-left: 0px;
+    max-width: 20%;
 }
 
 @media (max-width: 991px) {
