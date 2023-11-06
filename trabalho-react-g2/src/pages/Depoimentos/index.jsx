@@ -49,11 +49,11 @@ export default function Depoimentos() {
                       <div className="btnsDepoimentos">
                         <div className="btn-editDepoimentos">
                           <Link to={`/update/${post.id}`}>
-                            <button className='buttonDepoimentos'>Editar</button>
+                            <button className='buttonDepoimentos'>✏️</button>
                           </Link>
                         </div>
                         <div className="btn-deleteDepoimentos">
-                          <button className='buttonDepoimentos' onClick={() => deletePost(post.id)}>Apagar</button>
+                          <button className='buttonDepoimentos' onClick={() => deletePost(post.id)}>🗑️</button>
                         </div>
                       </div>
                     </div>

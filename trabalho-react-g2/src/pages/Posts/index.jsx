@@ -42,7 +42,7 @@ export default function Posts() {
     <div>
       <Header />
       <main className="divPrincipal">
-        <div className="card-post">
+        <div className="formulario card-post">
           <h1>Criar depoimento</h1>
           <hr />
           <div className="card-body-post">

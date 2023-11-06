@@ -39,9 +39,10 @@
    width: 100%;
    padding: 10px;
    font-size: 1rem;
-   border: 1px solid #759CCF;
+   border: none;
    border-radius: 5px;
    box-sizing: border-box;
+   margin-bottom: 20px;
 }
 
 .error-message {
@@ -61,10 +62,21 @@
    transition: background-color 0.3s ease;
    width: 100%;
    max-width: 200px;
+   -webkit-transition: background-color 0.3s ease;
+   -moz-transition: background-color 0.3s ease;
+   -ms-transition: background-color 0.3s ease;
+   -o-transition: background-color 0.3s ease;
 }
 
 .btn-post button:hover {
+   background-color: #ec86be;
+}
+
+.formulario {
    background-color: #759CCF;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
