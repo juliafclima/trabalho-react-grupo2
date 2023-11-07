@@ -3,6 +3,7 @@
     flex-direction: row;
     gap: 2vw;
     align-items: center;
+    justify-content: space-around;
     padding: 2vw;
 }
 
@@ -10,6 +11,9 @@
     .pai {
         flex-direction: column;
         gap: 1.5vw;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
         padding: 2vw;
     }
 }
@@ -17,7 +21,6 @@
 .coluas-esquerda {
     display: flex;
     flex-direction: column;
-    line-height: normal;
     width: 20%;
     padding: 1vw;
 }
@@ -30,96 +33,61 @@
 
 .coluas-meio {
     background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-.div-orientacao-esquerda {
-    display: flex;
-    margin-top: 24px;
-    flex-direction: column;
-}
-
-@media (max-width: 991px) {
-    .div-orientacao-esquerda {
-        margin-top: 40px;
-    }
-}
-
-.bio {
-    border-radius: 40px;
-    background-color: #fff;
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    padding: 17px 26px 102px 10px;
+    padding: 2vw;
+    border-radius: 2vw;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 991px) {
-    .bio {
-        margin-top: 40px;
-        padding: 0 20px 100px;
-    }
-}
-
-.borda-rosa {
-    border-radius: 50%;
-    background-color: #ed2590;
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    padding: 5px 3px 5px 4px;
-}
-
-.img-perfil {
-    aspect-ratio: 1.04;
-    object-fit: contain;
     width: 100%;
 }
 
-.div-nome-perfil {
-    align-self: stretch;
+.bio {
+    border-radius: 4vw;
+    background-color: #fff;
     display: flex;
-    margin-top: 31px;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column;
+    padding: 1.5vw 2.5vw 8vw 1vw;
+}
+
+.img-perfil {
+    width: 70%;
+    border-radius: 50%;
+    background-color: #ed2590;
+    display: flex;
+    padding: 0.5vw 0.3vw 0.5vw 0.4vw;
+    margin: auto;
+}
+
+.div-nome-perfil {
+    display: flex;
+    margin-top: 1.55vw;
+    align-items: center;
+    justify-content: center;
+    gap: 1.04vw;
 }
 
 .barra-rosa {
-    border-radius: 40px;
+    border-radius: 4vw;
     background-color: #ed2590;
-    align-self: stretch;
-    display: flex;
-    width: 16px;
-    height: 63px;
-    flex-direction: column;
+    width: 0.83vw;
+    height: 3.29vw;
 }
 
 .nome-bio {
     color: #000;
-    align-self: center;
-    font: 400 30px Adamina, sans-serif;
+    font: 400 2.5vw/1.2 'Adamina', sans-serif;
+    text-decoration: none;
 }
 
 .letrinhas-cinzas {
     color: #413b3b;
-    align-self: center;
-    margin-top: 14px;
-    max-width: 429px;
-    font: 400 19.8px Adamina, sans-serif;
+    margin-top: 0.72vw;
+    max-width: 25.72vw;
+    font: 400 1.23vw/1.2 'Adamina', sans-serif;
 }
 
 .linha-cinza {
     background-color: #c9c9c9;
-    align-self: stretch;
-    margin-top: 42px;
-    height: 2px;
+    margin-top: 2.08vw;
+    height: 0.1vw;
 }
 
 .div-do-editar-perfil,
@@ -129,11 +97,23 @@
 .div-interesses-musicas,
 .div-interesses-filmes,
 .div-interesses-livro {
-    align-self: start;
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    margin-top: 24px;
+    font-size: 16px;
+    margin-top: 1.04vw;
+}
+
+.banda-1,
+.filme1,
+.livro1 {
+    margin-left: 20px;
+    border: 1px solid #ed2590;
+    padding: 5px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 
 .lapis,
@@ -144,11 +124,9 @@
 .smile,
 .like,
 .love {
-    aspect-ratio: 1;
+    width: 1.88vw;
+    height: 1.88vw;
     object-fit: contain;
-    width: 27px;
-    overflow: hidden;
-    align-self: start;
 }
 
 .editar-perfil,
@@ -162,17 +140,17 @@
 .filmes,
 .livro1 {
     color: #413b3b;
-    align-self: start;
-    font: 400 30px Arial, sans-serif;
+    text-decoration: none;
+    margin-left: 5px;
 }
 
 .barra-cinza {
+    border-radius: 4vw;
+    background-color: #e3eaf2;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    background-color: #e3eaf2;
-    height: 5vh;
 }
 
 .frase-pensamento {
@@ -183,6 +161,7 @@
     align-items: center;
     padding: 14px 40px 14px 16px;
     font: 400 100% Arial, sans-serif;
+    word-wrap: break-word;
 }
 
 .fa,
@@ -191,12 +170,39 @@
 .sexy,
 .musicas,
 .relacionamento-cinza,
-.casado,
 .quem-sou-eu-cinza,
 .pais-cinza,
 .filmes,
 .livros {
     color: #b2b1b4;
-    align-self: stretch;
-    font: 400 31px Arial, sans-serif;
+    font: 400 2vw 'Arial', sans-serif;
+    padding-left: 15px;
+    padding: 10px;
+}
+
+.div-letrinhas-cinzas-cima {
+    display: flex;
+    flex-direction: row;
+    order: -1;
+    margin-bottom: 20px;
+}
+
+.div-icones {
+    display: flex;
+    gap: 8%;
+    margin-top: -25px;
+}
+
+.div-orientacao-meio {
+    display: flex;
+    flex-direction: column;
+}
+
+.relacionamento,
+.quem-sou-eu,
+.pais,
+.linha-cinza-perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
