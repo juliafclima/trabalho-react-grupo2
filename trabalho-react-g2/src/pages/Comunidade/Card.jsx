@@ -53,7 +53,7 @@ const Card = ({
             height={window.innerHeight * 9}
           />
         )}
-        <h1>{titulo}</h1>
+        <h1> <strong>{titulo}</strong></h1>
         <p className="piquininim">{piquininim}</p>
         <p>
           <span className="descricao">descrição: </span>
