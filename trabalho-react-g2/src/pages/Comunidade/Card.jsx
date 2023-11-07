@@ -18,9 +18,8 @@ const Card = ({
   const [confettiPosition, setConfettiPosition] = useState({ x: 0, y: 0 });
 
   const handleParticiparClick = () => {
-    
-    const x = 300; 
-    const y = 200; 
+    const x = 300;
+    const y = 200;
 
     setConfettiPosition({ x, y });
     setExibirConfetes(true);
@@ -30,9 +29,9 @@ const Card = ({
     <div className="cardComunidade">
       <div className="subCardComunidade">
         <div className="imagemComunidadeCentralizada">
-          <img src={imgSrc} alt="" className="imagemComunidade"/>
+          <img src={imgSrc} alt="" className="imagemComunidade" />
         </div>
-        
+
         <p>
           <strong className="tituloComunidade">{titulo}</strong>
         </p>
@@ -49,13 +48,9 @@ const Card = ({
       <div className="textoComunidade">
         {exibirConfetes && (
           <ReactConfetti
-            // numberOfPieces={100} // Número de confettis
-            recycle={false} // Evita que os confettis reapareçam após a animação inicial
-            // initialVelocityX={1} // Velocidade inicial no eixo X
-            // initialVelocityY={5} // Velocidade inicial no eixo Y
+            recycle={false}
             width={window.innerWidth}
-            height={window.innerHeight *9}
-            // confettiSource={confettiPosition} // Usa a posição personalizada do confetti
+            height={window.innerHeight * 9}
           />
         )}
         <h1>{titulo}</h1>
