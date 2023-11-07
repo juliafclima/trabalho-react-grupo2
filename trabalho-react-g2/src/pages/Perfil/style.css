@@ -1,4 +1,5 @@
 .principal {
+    max-width: 100vw;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -8,7 +9,9 @@
 }
 
 .fundo-azul {
-    margin-top: -200px;
+    max-width: 100vw;
+    max-height: 100%;
+    background: linear-gradient(to right, #DCE8F4, #98bdf5);
     border-radius: 20px;
     width: 100%;
     padding: 6% 3.5% 0 10%;
@@ -66,8 +69,8 @@
     align-self: center;
     white-space: nowrap;
     margin-left: 10px;
-    margin-top: -70px;
-    font: 400 90px Hello Angel, sans-serif;
+    margin-top: -950px;
+    font: 400 80px Hello Angel, sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -84,7 +87,7 @@
     background-color: #fff;
     align-self: stretch;
     display: flex;
-    margin-top: 5px;
+    margin-top: -800px;
     margin-left: -10px;
     flex-grow: 1;
     flex-direction: column;
@@ -140,7 +143,7 @@
     height: 63px;
     flex-direction: column;
     flex-grow: 1;
-    flex-basis:0%;
+    flex-basis: auto;
 }
 
 .nome-bio {
@@ -148,8 +151,7 @@
     align-self: center;
     flex-grow: 1;
     flex-basis: auto;
-    margin-right: 130px;
-    
+    margin: auto 0;
     font: 400 30px Adamina, sans-serif;
 }
 
@@ -365,17 +367,25 @@
         font-size: 40px;
     }
 }
+.barra-cinza{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #e3eaf2;
+    height: 5vh;
+    max-width: 100vh;
+}
 
 .frase-pensamento {
+    display: flex;
     color: #000;
     align-self: stretch;
     white-space: nowrap;
     align-items: center;
-    border-radius: 20px;
-    background-color: #e3eaf2;
-    margin-top: 49px;
     padding: 14px 40px 14px 16px;
-    font: 400 30px Arial, sans-serif;
+    font: 400 100% Arial, sans-serif;
+    max-width: 100vh;
 }
 
 @media (max-width: 991px) {
@@ -867,7 +877,7 @@
     background-color: #fff;
     align-self: stretch;
     display: flex;
-    margin-top: 268px;
+    margin-top: 30px;
     flex-grow: 1;
     flex-direction: column;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
@@ -1002,7 +1012,6 @@
 }
 
 .div-56 {
-    margin-right: 280px;
     align-self: stretch;
     color: #000;
     font: 400 53px Arial, sans-serif;
@@ -1112,7 +1121,7 @@
     display: flex;
     flex-direction: column;
     margin-right: 10px;
-    margin-top: 16px;
+    margin-top: -300px;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
     padding: 19px 48px 64px 30px;
 }
@@ -1419,11 +1428,12 @@
 /* ############################################ */
 
 .div-71 {
+    height: 1000px;
     border-radius: 40px;
     background-color: #fff;
     align-self: stretch;
     display: flex;
-    margin-top: 300px;
+    margin-top: 10px;
     flex-grow: 1;
     flex-direction: column;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
@@ -1478,7 +1488,6 @@
 }
 
 .div-75 {
-    transform: translate(-9vh, -3vh);
     color: #000;
     align-self: end;
     font: 400 30px Arial, sans-serif;
@@ -1534,8 +1543,6 @@
     flex-direction: column;
 }
 
-
-
 @media (max-width: 991px) {
     .div-77 {
         margin-top: 40px;
@@ -1543,7 +1550,6 @@
 }
 
 .div-78 {
-    transform: translate(10vh,-3vh);
     color: #ed2590;
     align-self: end;
     margin-right: 18px;
