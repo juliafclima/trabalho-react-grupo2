@@ -11,7 +11,7 @@ Git clone API: https://github.com/CarlosAlbertoMPZ/Trabalho-API-Grupo2.git
 
 ## Trabalho extra (20 pontos)
 
-Julia - Nav Bar responsiva.
+Julia - Nav-Bar responsiva e adição de depoimento dinâmico.
 
 Carlos - Relógio e data em tempo real e Carrossel.
 

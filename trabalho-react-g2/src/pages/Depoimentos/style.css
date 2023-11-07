@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  
 }
 
 .buttonNovoDepoimento {
@@ -15,6 +16,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 30px;
+  text-decoration: none;
 }
 
 .buttonNovoDepoimento:hover {
@@ -93,11 +95,15 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  border-radius: 20px;
   background-color: #ffffff;
   flex-direction: column;
   align-items: center;
   padding: 10px;
   margin-bottom: -10px;
+  margin: 5px 350px;
+  border: none !important;
+  
   
 }
 
@@ -110,4 +116,21 @@
   align-items: center;
   padding: 10px;
   margin-bottom: -10px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 5px 3px 10px black;
+ 
+}
+
+.retangulo{
+  border-radius: 5px;
+  border: none;
+}
+
+.retangulo:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
 }

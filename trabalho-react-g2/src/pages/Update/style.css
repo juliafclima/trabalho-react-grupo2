@@ -43,6 +43,7 @@
    border-radius: 5px;
    box-sizing: border-box;
    margin-bottom: 20px;
+   border: 2px solid #ED2592;
 }
 
 .error-message {
@@ -85,4 +86,8 @@
    .fields textarea {
       font-size: 0.9rem;
    }
+}
+
+textarea:focus, input:focus {
+   outline: none;
 }
