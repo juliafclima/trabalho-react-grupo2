@@ -1,12 +1,13 @@
-.clock {
-  font-size: 20px;
-  color: #ED2592;
-  padding: 10px 20px;
-  text-align: right;
-  transition: font-size 0.3s ease, padding 0.3s ease;
-  background-color: white;
+.clockBar {
+  background-color: rgb(61, 123, 0);
   margin-bottom: 20px;
-}
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+  }
+
+  .clock {
+    margin-left: 90%;
+    padding: 10vh, 10vh;
+  }
 
 @media (max-width: 768px) {
   .clock {
