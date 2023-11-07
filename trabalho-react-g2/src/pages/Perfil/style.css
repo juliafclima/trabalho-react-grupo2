@@ -867,6 +867,7 @@
         white-space: initial;
         padding: 0 20px;
     }
+<<<<<<< Updated upstream
 }
 
 /* ############################################ */
@@ -1791,4 +1792,6 @@
     align-self: stretch;
     margin-top: 20px;
     font: 400 20px Arial, sans-serif;
+=======
+>>>>>>> Stashed changes
 }

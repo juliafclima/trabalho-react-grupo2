@@ -8,6 +8,7 @@ const Perfil = () => {
 
     return (
         <>
+<<<<<<< Updated upstream
             <div class="principal">
                 <div class="fundo-azul">
                     <Header />
@@ -24,6 +25,16 @@ const Perfil = () => {
 
                                 <div class="bio">{/*bio */}
                                     <div class="borda-rosa">
+=======
+            <Header />
+            <div className="principal">
+                <div className="fundo-azul">
+                    <div className="pai">
+                        <div className="coluas-esquerda">
+                            <div className="div-orientacao-esquerda">
+                                <div className="bio">
+                                    <div className="borda-rosa">
+>>>>>>> Stashed changes
                                         <img
                                             loading="lazy"
                                             srcset="src\assets\img\perfil\image.png"
@@ -75,15 +86,21 @@ const Perfil = () => {
                                         <img
                                             loading="lazy"
                                             srcset="src\assets\img\perfil\depoimentos.png"
+<<<<<<< Updated upstream
                                             class="dep"
                                         />
                                         <a href="https://www.rekut.com" style={{ textDecoration: 'none' }}>
                                             <div class="galeria">depomentos</div>
                                         </a>
+=======
+                                            className="dep" />
+                                        <div className="galeria">depomentos</div>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                             </div>
                         </div>
+<<<<<<< Updated upstream
                         {/* ########################################################################################################################################################################################################################################## */}
 
 
@@ -97,6 +114,15 @@ const Perfil = () => {
                                             Nasci para ser vintage em um mundo digital. Sou o charme do cringe
                                             em pessoa! 💁‍♀️📻
                                         </div>
+=======
+                        <div className="coluas-meio">
+                            <div className="div-orientacao-meio">
+                                <div className="perfil">
+                                    <div className="nome-perfil">Lucas José Gonçalves</div>
+                                    <div className="frase-pensamento">
+                                        Nasci para ser vintage em um mundo digital. Sou o charme do cringe
+                                        em pessoa! 💁‍♀️📻
+>>>>>>> Stashed changes
                                     </div>
                                     <div class="div-letrinhas-cinzas-cima">
                                         <div class="fa">fãs</div>
@@ -157,6 +183,7 @@ const Perfil = () => {
                                         <div class="livro1">Diário de um Banana</div>
                                     </div>
                                 </div>
+<<<<<<< Updated upstream
 
                                 {/* ########################################################################################################################################################################################################################################## */}
 
@@ -355,6 +382,8 @@ const Perfil = () => {
                                         </div>
                                     </div>
                                 </div>
+=======
+>>>>>>> Stashed changes
                             </div>
                         </div>
 
