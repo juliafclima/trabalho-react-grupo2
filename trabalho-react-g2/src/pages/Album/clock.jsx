@@ -15,8 +15,10 @@ export default function Clock() {
   const formattedDateTime = dateTime.toLocaleString();
 
   return (
-    <div className="clock">
+    <div className='clockBar'>
+      <div className="clock">
       {formattedDateTime}
+      </div>
     </div>
   );
 }

@@ -1,12 +1,24 @@
-.clock {
-  font-size: 20px;
-  color: #ED2592;
-  padding: 10px 20px;
-  text-align: right;
-  transition: font-size 0.3s ease, padding 0.3s ease;
+.clockBar {
   background-color: white;
   margin-bottom: 20px;
-}
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+  }
+
+  .clock {
+    font-size: 20px;
+    color: #259ded92;
+    padding: 10px 20px;
+    text-align: right;
+    transition: font-size 0.3s ease, padding 0.3s ease;
+    background-color: white;
+    margin-left: 80%;
+    padding-left: 3vh;
+    transition: box-shadow 1s;
+  }
+
+  .clock:hover {
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(113, 30, 209) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(180, 19, 255) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(211, 94, 241) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(227, 61, 205) 40px -40px;
+  }
 
 @media (max-width: 768px) {
   .clock {

@@ -18,24 +18,23 @@ const Card = ({
   const [confettiPosition, setConfettiPosition] = useState({ x: 0, y: 0 });
 
   const handleParticiparClick = () => {
-    // Defina as coordenadas personalizadas onde você deseja que o confetti apareça na tela
-    const x = 300; // Valor personalizado para a posição X
-    const y = 200; // Valor personalizado para a posição Y
+    
+    const x = 300; 
+    const y = 200; 
 
-    // Atualize a posição do confetti com as coordenadas personalizadas
     setConfettiPosition({ x, y });
-
-    // Ativa a exibição do confetti
     setExibirConfetes(true);
   };
 
   return (
     <div className="cardComunidade">
       <div className="subCardComunidade">
-        <img src={imgSrc} alt="" />
+        <div className="imagemComunidadeCentralizada">
+          <img src={imgSrc} alt="" className="imagemComunidade"/>
+        </div>
+        
         <p>
-          {" "}
-          <strong>{titulo}</strong>{" "}
+          <strong className="tituloComunidade">{titulo}</strong>
         </p>
         <p>({membro} membros)</p>
         <hr />
@@ -51,7 +50,7 @@ const Card = ({
         {exibirConfetes && (
           <ReactConfetti
             // numberOfPieces={100} // Número de confettis
-            // recycle={false} // Evita que os confettis reapareçam após a animação inicial
+            recycle={false} // Evita que os confettis reapareçam após a animação inicial
             // initialVelocityX={1} // Velocidade inicial no eixo X
             // initialVelocityY={5} // Velocidade inicial no eixo Y
             width={window.innerWidth}
@@ -62,28 +61,28 @@ const Card = ({
         <h1>{titulo}</h1>
         <p className="piquininim">{piquininim}</p>
         <p>
-          <span>descrição: </span>
-          {descricao}
+          <span className="descricao">descrição: </span>
+          <span className="tituloVertical">{descricao}</span>
         </p>
         <p>
-          <span>idioma: </span>
-          {idioma}
+          <span className="descricao">idioma: </span>
+          <span className="tituloVertical">{idioma}</span>
         </p>
         <p>
-          <span>categoria: </span>
-          {categoria}
+          <span className="descricao">categoria: </span>
+          <span className="tituloVertical">{categoria}</span>
         </p>
         <p>
-          <span>tipo: </span>
-          {tipo}
+          <span className="descricao">tipo: </span>
+          <span className="tituloVertical">{tipo}</span>
         </p>
         <p>
-          <span>dono: </span>
-          {dono}
+          <span className="descricao">dono: </span>
+          <span className="tituloVertical">{dono}</span>
         </p>
         <p>
-          <span>data: </span>
-          {data}
+          <span className="descricao">data: </span>
+          <span className="tituloVertical">{data}</span>
         </p>
       </div>
     </div>
