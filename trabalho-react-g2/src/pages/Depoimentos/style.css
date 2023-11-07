@@ -39,11 +39,12 @@
 .cardDepoimentos {
   border: 4px solid #ED2592;
   padding: 20px;
-  background-color: #A7C1E3;
+  background-color: #77a4e0;
   border-radius: 30px;
   width: 100%;
   max-width: 700px;
   word-wrap: break-word;
+  color: white;
 }
 
 .headerDepoimentos {

@@ -27,30 +27,14 @@ export default function Depoimentos() {
     setPosts(posts.filter(post => post.id !== id));
   }
 
-  function calculateElapsedTime(date) {
-    const postDate = new Date(date);
-    const currentDate = new Date();
-    const elapsedTimeInMilliseconds = currentDate - postDate;
-    const seconds = Math.floor(elapsedTimeInMilliseconds / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    const days = Math.floor(hours / 24);
-
-    if (days > 0) {
-      return `${days} ${days === 1 ? 'dia' : 'dias'}`;
-    } else if (hours > 0) {
-      return `${hours} ${hours === 1 ? 'hora' : 'horas'}`;
-    } else if (minutes > 0) {
-      return `${minutes} ${minutes === 1 ? 'minuto' : 'minutos'}`;
-    } else {
-      return `${seconds} ${seconds === 1 ? 'segundo' : 'segundos'}`;
-    }
+  function gerarTempoAleatorio() {
+    return Math.floor(Math.random() * 60);
   }
-  
+
   return (
     <>
       <Header />
-    <WeatherApp />
+      <WeatherApp />
 
       <Link to='/posts'>
         <div className="containerNovoPosts">
@@ -62,6 +46,7 @@ export default function Depoimentos() {
         <main>
           <div className="cardsDepoimentos">
             {posts.map((post, key) => {
+              const tempoAtras = Math.floor(Math.random() * 60);
               return (
                 <div className="cardDepoimentos" key={key}>
                   <header className='headerDepoimentos'>
@@ -80,7 +65,7 @@ export default function Depoimentos() {
                         </div>
                       </div>
                     </div>
-                    <p>Postado {calculateElapsedTime(post.dataPublicacao)} atrás</p>
+                    <p>Postado há {tempoAtras} minutos atrás</p>
                   </header>
                 </div>
               );
@@ -88,7 +73,7 @@ export default function Depoimentos() {
           </div>
         </main>
       </div>
-            <Footer />
+      <Footer />
     </>
   );
 }
