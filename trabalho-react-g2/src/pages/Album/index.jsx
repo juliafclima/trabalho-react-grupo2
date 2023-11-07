@@ -72,6 +72,7 @@ export default function ImageCarousel() {
         </Carousel>
         </div>
       )}
+      <div className='espaçoEntre'> </div>
       <Footer />
     </div>
   );

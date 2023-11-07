@@ -4,7 +4,11 @@
 }
 
 .inputAlbum{
+  margin-left: 10vh;
   margin-top: 10h;
-  margin-bottom: 53.4vh;
+  margin-bottom: 5vh;
 }
  
+.espaçoEntre {
+  margin-bottom: 24.7vh;
+}
