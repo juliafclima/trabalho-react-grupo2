@@ -20,6 +20,7 @@ const Header = () => {
                   <Link to='/depoimentos'>Depoimentos</Link>
                   <Link to='/comunidade'>Comunidades</Link>
                   <Link to='/album'>Album</Link>
+                  <Link to='/login'>Sair</Link>
                </div>
                <div className="menu-iconHeader" onClick={handleMenuClick}>
                   ☰
