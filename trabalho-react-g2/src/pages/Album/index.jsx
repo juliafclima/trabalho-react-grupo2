@@ -3,6 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import "./style.css";
 
 
 export default function ImageCarousel() {
@@ -41,8 +42,8 @@ export default function ImageCarousel() {
         key={fileInputKey}
         onChange={handleImageUpload}
       />
-
       {images.length > 0 && (
+        <div className='caroussell'>
         <Carousel 
           showThumbs={false}
           infiniteLoop={true}
@@ -53,7 +54,7 @@ export default function ImageCarousel() {
           centerMode={true}
           centerSlidePercentage={60}
           dynamicHeight={true}
-          width="40%"
+          width="50%"
           stopOnHover={true}
         >
           {images.map((image, index) => (
@@ -69,6 +70,7 @@ export default function ImageCarousel() {
             </div>
           ))}
         </Carousel>
+        </div>
       )}
       <Footer />
     </div>
