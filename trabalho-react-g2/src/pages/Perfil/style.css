@@ -34,10 +34,12 @@
 .coluas-meio {
     background-color: white;
     padding: 2vw;
-    border-radius: 2vw;
+    border-radius: 4vw;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
     width: 100%;
+    position: relative;
 }
+
 
 .bio {
     border-radius: 4vw;
@@ -45,7 +47,46 @@
     display: flex;
     flex-direction: column;
     padding: 1.5vw 2.5vw 8vw 1vw;
+
+    position: relative;
+
 }
+
+.bio:before, 
+.bio:after,
+.coluas-meio:before,
+.coluas-meio:after {
+    border-radius: 4vw;
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094,#759CCF,  #fb0094,#628bc2,#fb0094,#567bac,  #fb0094,#5579a9);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.bio:after,.coluas-meio:after {
+    filter: blur(5px);
+}
+
 
 .img-perfil {
     width: 70%;
@@ -68,10 +109,10 @@
     border-radius: 4vw;
     background-color: #ed2590;
     width: 0.83vw;
-    height: 3.29vw;
+    height: 3.29vw;  
 }
 
-.nome-bio {
+.nome-bio,.nome-perfil {
     color: #000;
     font: 400 2.5vw/1.2 'Adamina', sans-serif;
     text-decoration: none;
