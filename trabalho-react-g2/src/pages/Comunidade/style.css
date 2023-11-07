@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .cardComunidade {
@@ -21,6 +22,7 @@
   padding: 20px;
   word-wrap: break-word;
   justify-content: center;
+  box-shadow: rgba(57, 124, 211, 0.486) 0px 6px 12px 6px, rgba(0, 0, 0, 0.61) 0px 3px 7px 3px;
 }
 
 .imagemComunidade
@@ -29,6 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 15px;
 }
 
 .card-imgComunidade {
@@ -50,8 +53,8 @@
   background-color: #ffffff;
   border-radius: 8px;
   padding: 15px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin: 10px;
   width: 300px;
   max-width: 100%;
