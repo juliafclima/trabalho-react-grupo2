@@ -42,7 +42,7 @@ const WeatherApp = () => {
   return (
     <div>
         <div className="previsao">
-      <h1>Clima Tempo</h1>
+      <h1>Clima Tempo 🌤️</h1>
       </div>
       <div className="clima">
       <input className='retangulo'
